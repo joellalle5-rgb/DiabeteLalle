@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DiabeTrack Pro - Assistant clinique complet du diabète</title>
+<style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sticky{position:sticky}.top-0{top:0}.z-50{z-index:50}.col-span-2{grid-column:span 2/span 2}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:.25rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.h-2\.5{height:.625rem}.min-h-screen{min-height:100vh}.w-2\.5{width:.625rem}.w-full{width:100%}.max-w-6xl{max-width:72rem}.border-collapse{border-collapse:collapse}.cursor-pointer{cursor:pointer}.list-decimal{list-style-type:decimal}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-x-3>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(.75rem*var(--tw-space-x-reverse));margin-left:calc(.75rem*(1 - var(--tw-space-x-reverse)))}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.space-y-1\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.375rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.375rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.space-y-8>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem*var(--tw-space-y-reverse))}.divide-y>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px*var(--tw-divide-y-reverse))}.overflow-x-auto{overflow-x:auto}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138/var(--tw-border-opacity,1))}.border-amber-300{--tw-border-opacity:1;border-color:rgb(252 211 77/var(--tw-border-opacity,1))}.border-amber-500{--tw-border-opacity:1;border-color:rgb(245 158 11/var(--tw-border-opacity,1))}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208/var(--tw-border-opacity,1))}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129/var(--tw-border-opacity,1))}.border-emergency-600{--tw-border-opacity:1;border-color:rgb(220 38 38/var(--tw-border-opacity,1))}.border-medical-100{--tw-border-opacity:1;border-color:rgb(224 242 254/var(--tw-border-opacity,1))}.border-medical-200{--tw-border-opacity:1;border-color:rgb(186 230 253/var(--tw-border-opacity,1))}.border-medical-600{--tw-border-opacity:1;border-color:rgb(3 105 161/var(--tw-border-opacity,1))}.border-purple-200{--tw-border-opacity:1;border-color:rgb(233 213 255/var(--tw-border-opacity,1))}.border-red-200{--tw-border-opacity:1;border-color:rgb(254 202 202/var(--tw-border-opacity,1))}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68/var(--tw-border-opacity,1))}.border-red-600{--tw-border-opacity:1;border-color:rgb(220 38 38/var(--tw-border-opacity,1))}.border-sky-500{--tw-border-opacity:1;border-color:rgb(14 165 233/var(--tw-border-opacity,1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225/var(--tw-border-opacity,1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199/var(--tw-bg-opacity,1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235/var(--tw-bg-opacity,1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229/var(--tw-bg-opacity,1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245/var(--tw-bg-opacity,1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105/var(--tw-bg-opacity,1))}.bg-emergency-700{--tw-bg-opacity:1;background-color:rgb(185 28 28/var(--tw-bg-opacity,1))}.bg-medical-100{--tw-bg-opacity:1;background-color:rgb(224 242 254/var(--tw-bg-opacity,1))}.bg-medical-50{--tw-bg-opacity:1;background-color:rgb(240 249 255/var(--tw-bg-opacity,1))}.bg-medical-600{--tw-bg-opacity:1;background-color:rgb(3 105 161/var(--tw-bg-opacity,1))}.bg-medical-700{--tw-bg-opacity:1;background-color:rgb(7 89 133/var(--tw-bg-opacity,1))}.bg-medical-800{--tw-bg-opacity:1;background-color:rgb(12 74 110/var(--tw-bg-opacity,1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255/var(--tw-bg-opacity,1))}.bg-purple-50{--tw-bg-opacity:1;background-color:rgb(250 245 255/var(--tw-bg-opacity,1))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226/var(--tw-bg-opacity,1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242/var(--tw-bg-opacity,1))}.bg-sky-50{--tw-bg-opacity:1;background-color:rgb(240 249 255/var(--tw-bg-opacity,1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.p-1\.5{padding:.375rem}.p-2{padding:.5rem}.p-2\.5{padding:.625rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-1{padding-bottom:.25rem}.pb-2{padding-bottom:.5rem}.pb-3{padding-bottom:.75rem}.pl-4{padding-left:1rem}.pr-3{padding-right:.75rem}.pt-2{padding-top:.5rem}.pt-4{padding-top:1rem}.text-left{text-align:left}.text-center{text-align:center}.align-top{vertical-align:top}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.font-sans{font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[13px\]{font-size:13px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-tight{line-height:1.25}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6/var(--tw-text-opacity,1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9/var(--tw-text-opacity,1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14/var(--tw-text-opacity,1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15/var(--tw-text-opacity,1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity,1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87/var(--tw-text-opacity,1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70/var(--tw-text-opacity,1))}.text-emerald-900{--tw-text-opacity:1;color:rgb(6 78 59/var(--tw-text-opacity,1))}.text-emergency-600{--tw-text-opacity:1;color:rgb(220 38 38/var(--tw-text-opacity,1))}.text-emergency-700{--tw-text-opacity:1;color:rgb(185 28 28/var(--tw-text-opacity,1))}.text-medical-100{--tw-text-opacity:1;color:rgb(224 242 254/var(--tw-text-opacity,1))}.text-medical-600{--tw-text-opacity:1;color:rgb(3 105 161/var(--tw-text-opacity,1))}.text-medical-700{--tw-text-opacity:1;color:rgb(7 89 133/var(--tw-text-opacity,1))}.text-medical-800{--tw-text-opacity:1;color:rgb(12 74 110/var(--tw-text-opacity,1))}.text-purple-700{--tw-text-opacity:1;color:rgb(126 34 206/var(--tw-text-opacity,1))}.text-purple-800{--tw-text-opacity:1;color:rgb(107 33 168/var(--tw-text-opacity,1))}.text-purple-900{--tw-text-opacity:1;color:rgb(88 28 135/var(--tw-text-opacity,1))}.text-red-100{--tw-text-opacity:1;color:rgb(254 226 226/var(--tw-text-opacity,1))}.text-red-700{--tw-text-opacity:1;color:rgb(185 28 28/var(--tw-text-opacity,1))}.text-red-800{--tw-text-opacity:1;color:rgb(153 27 27/var(--tw-text-opacity,1))}.text-red-900{--tw-text-opacity:1;color:rgb(127 29 29/var(--tw-text-opacity,1))}.text-sky-900{--tw-text-opacity:1;color:rgb(12 74 110/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.underline{text-decoration-line:underline}.opacity-90{opacity:.9}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.hover\:bg-amber-600:hover{--tw-bg-opacity:1;background-color:rgb(217 119 6/var(--tw-bg-opacity,1))}.hover\:bg-emerald-700:hover{--tw-bg-opacity:1;background-color:rgb(4 120 87/var(--tw-bg-opacity,1))}.hover\:bg-medical-700:hover{--tw-bg-opacity:1;background-color:rgb(7 89 133/var(--tw-bg-opacity,1))}.hover\:bg-slate-900:hover{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-medical-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(2 132 199/var(--tw-ring-opacity,1))}@media (min-width:768px){.md\:col-span-2{grid-column:span 2/span 2}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.md\:text-sm{font-size:.875rem;line-height:1.25rem}}@media print{.print\:bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.print\:text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity,1))}.print\:text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}}</style>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#075985">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<style>
+.module{display:none}.module.active{display:block}
+.step-content{display:none}.step-content.active{display:block}
+.tab-btn.active{border-bottom:3px solid #0284c7;color:#0284c7;font-weight:700}
+.mtab{padding:.45rem .9rem;border-radius:.5rem;font-size:.8rem;font-weight:600;color:#e0f2fe;background:rgba(255,255,255,.12)}
+.mtab.active{background:#fff;color:#075985}
+[id^="u-"],[id^="c-"]{scroll-margin-top:7rem}
+@media print{header,nav,.no-print,.fields{display:none!important}.step-content{display:block!important;box-shadow:none}body{background:#fff}}
+</style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans min-h-screen">
+<header class="bg-medical-700 text-white shadow-lg sticky top-0 z-50">
+ <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap gap-3 justify-between items-center">
+  <div class="flex items-center space-x-3">
+   <div class="bg-white text-medical-700 p-2 rounded-lg font-bold text-xl">DTP</div>
+   <div><h1 class="font-bold text-lg leading-tight">DiabeTrack Pro</h1><p class="text-xs text-medical-100">Diagnostic, traitement, urgences et complications chroniques du diabète</p></div>
+  </div>
+  <div class="flex flex-wrap items-center gap-2">
+   <button type="button" class="mtab active" data-mod="assistant" onclick="ouvrirModule('assistant')">Assistant clinique</button>
+   <button type="button" class="mtab" data-mod="urgences" onclick="ouvrirModule('urgences')">Urgences</button>
+   <button type="button" class="mtab" data-mod="medicaments" onclick="ouvrirModule('medicaments')">Médicaments</button>
+   <button type="button" class="mtab" data-mod="chroniques" onclick="ouvrirModule('chroniques')">Complications chroniques</button>
+   <button type="button" id="btnTest" onclick="chargerCasTest()" class="bg-amber-500 hover:bg-amber-600 text-white px-3 py-1.5 rounded text-xs font-semibold shadow">🧪 Cas test (M. Arthur K.)</button>
+  </div>
+ </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-6">
+<div id="mod-assistant" class="module active">
+<label class="no-print flex items-center gap-2 text-xs bg-white rounded-lg shadow-sm px-3 py-2 mb-3 cursor-pointer"><input type="checkbox" id="proto_hop"> Appliquer le protocole de mon service (DT2 : metformine + insuline basale d’emblée)</label>
+ <nav id="nav" class="bg-white rounded-xl shadow-sm p-4 mb-6 flex justify-between items-center overflow-x-auto text-xs md:text-sm font-medium"></nav>
+ <div id="toast" class="hidden mb-4 p-3 rounded-lg bg-amber-100 text-amber-900 text-xs font-medium"></div>
+ <form id="app" onsubmit="return false"></form>
+ <p class="text-[11px] text-slate-500 mt-4">Aide à la décision pour professionnels de santé : elle ne remplace ni le jugement clinique ni les RCP. Aucune donnée n’est enregistrée.</p>
+</div>
+<div id="mod-urgences" class="module"><div class="space-y-8 text-sm">
+ <div class="bg-emergency-700 text-white rounded-xl p-5 flex flex-wrap justify-between items-center gap-3">
+  <div><h2 class="text-2xl font-extrabold">Complications aiguës du diabète</h2><p class="text-sm text-red-100 mt-1">Adulte non enceinte · seuils du consensus ADA/EASD/JBDS/AACE/DTS 2024 · adaptations aux ressources limitées signalées</p></div>
+  <button type="button" onclick="window.print()" class="no-print bg-white text-emergency-700 font-bold px-4 py-2 rounded-lg text-xs shadow">🖨 Imprimer / PDF</button>
+ </div>
+ <div class="no-print flex flex-wrap gap-2 text-xs">
+  <a href="#u-triage" class="bg-white border px-3 py-1.5 rounded-full font-semibold">Triage</a><a href="#u-hypo" class="bg-white border px-3 py-1.5 rounded-full font-semibold">Hypoglycémie</a><a href="#u-acd" class="bg-white border px-3 py-1.5 rounded-full font-semibold">Acidocétose</a><a href="#u-shh" class="bg-white border px-3 py-1.5 rounded-full font-semibold">SHH</a><a href="#u-eug" class="bg-white border px-3 py-1.5 rounded-full font-semibold">ACD euglycémique</a><a href="#u-calc" class="bg-white border px-3 py-1.5 rounded-full font-semibold">Calculateur</a>
+ </div>
+
+<div class="flex flex-wrap gap-3 text-xs">
+ <span class="bg-medical-100 text-medical-800 px-2 py-1 rounded font-semibold">🔷 Consensus 2024</span>
+ <span class="bg-amber-100 text-amber-900 px-2 py-1 rounded font-semibold">🔶 Adaptation ressources limitées : protocole de terrain, à valider avec votre service de réanimation</span>
+</div>
+
+<section id="u-triage" class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-emergency-600">
+ <h2 class="text-xl font-bold mb-3"><span class="text-emergency-600">1.</span> Triage initial</h2>
+ <p class="text-slate-600 mb-4">Tout trouble de conscience chez un diabétique : <strong>glycémie capillaire immédiate</strong>, puis cétonurie, constantes, fréquence respiratoire, état d’hydratation, recherche d’une cause.</p>
+ <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+  <div class="bg-red-50 border border-red-200 p-4 rounded-lg"><div class="font-bold text-red-800 text-sm">HYPOGLYCÉMIE</div><p class="text-red-700 font-semibold mb-1">&lt; 0,70 g/L</p><p>Conscient : resucrage oral. Conscience altérée ou besoin d’un tiers : sévère, voie IV ou glucagon.</p></div>
+  <div class="bg-amber-50 border border-amber-200 p-4 rounded-lg"><div class="font-bold text-amber-800 text-sm">ACIDOCÉTOSE (ACD)</div><p class="text-amber-700 font-semibold mb-1">Glycémie ≥ 2,00 g/L (ou diabète connu) + cétose + acidose</p><p>Glycémie parfois &lt; 2,00 g/L (iSGLT2, jeûne, grossesse). Cétonémie ≥ 3,0 mmol/L ou cétonurie ≥ 2+.</p></div>
+  <div class="bg-purple-50 border border-purple-200 p-4 rounded-lg"><div class="font-bold text-purple-800 text-sm">SYNDROME HYPEROSMOLAIRE (SHH)</div><p class="text-purple-700 font-semibold mb-1">Glycémie ≥ 6,00 g/L + osmolalité efficace &gt; 300 mOsm/kg</p><p>Cétose absente ou minime. Environ un tiers des crises sont <strong>mixtes</strong> (ACD + SHH) : traiter l’ACD en tenant compte de l’hyperosmolarité.</p></div>
+ </div>
+</section>
+
+<section id="u-hypo" class="bg-white rounded-xl shadow-sm p-6">
+ <h2 class="text-xl font-bold mb-4 border-b pb-2"><span class="text-emergency-600">2.</span> Hypoglycémie</h2>
+ <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4 text-xs">
+  <div class="p-3 bg-slate-50 border rounded-lg"><b class="block text-sm">Niveau 1</b>0,54 à 0,69 g/L</div>
+  <div class="p-3 bg-slate-50 border rounded-lg"><b class="block text-sm">Niveau 2</b>&lt; 0,54 g/L</div>
+  <div class="p-3 bg-red-50 border border-red-200 rounded-lg"><b class="block text-sm text-red-800">Niveau 3 (sévère)</b>Conscience altérée ou besoin d’un tiers, quel que soit le chiffre</div>
+ </div>
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
+   <h3 class="font-bold text-emerald-800 mb-2">A. Patient conscient</h3>
+   <ol class="text-xs list-decimal pl-4 space-y-1.5">
+    <li><strong>15 à 20 g de glucides rapides</strong> (3 morceaux de sucre, 150 mL de jus ou de soda non light).</li>
+    <li>Recontrôle à <strong>15 min</strong> ; répéter si &lt; 0,70 g/L.</li>
+    <li>Collation de glucides complexes si le repas est à plus d’une heure.</li>
+   </ol>
+  </div>
+  <div class="bg-red-50 border border-red-200 p-4 rounded-xl">
+   <h3 class="font-bold text-red-800 mb-2">B. Conscience altérée ou troubles de déglutition</h3>
+   <p class="text-xs font-bold text-red-900 mb-2">⚠ Rien par la bouche (fausse route).</p>
+   <ul class="text-xs space-y-2">
+    <li>• <strong>Voie IV :</strong> G30 % 50 à 100 mL en bolus (15 à 30 g), recontrôle à 15 min.</li>
+    <li>• <strong>Sans voie IV :</strong> glucagon 1 mg IM ou SC (3 mg en nasal), position latérale de sécurité. Peu efficace en cas de dénutrition, d’alcool ou de glycogène épuisé.</li>
+    <li>• <strong>Après le bolus :</strong> perfusion de G10 % (ou G5 %) pour maintenir ≥ 1,00 g/L, car la récidive est fréquente. Glycémie capillaire toutes les 1 à 2 h.</li>
+   </ul>
+  </div>
+ </div>
+ <div class="mt-4 bg-amber-50 border border-amber-200 p-3 rounded-lg text-xs">
+  <b>Causes à rechercher (contexte africain) :</b> <b>sulfamide hypoglycémiant</b> (surveillance hospitalière 24 à 48 h : l’effet dépasse celui du glucose ; octréotide si récidives et disponible), <b>paludisme grave et quinine</b> (hyperinsulinisme), alcool (thiamine IV avant ou avec le glucose si éthylisme ou dénutrition), insuffisance rénale, erreur d’insuline, jeûne, sepsis.
+ </div>
+</section>
+
+<section id="u-acd" class="bg-white rounded-xl shadow-sm p-6">
+ <h2 class="text-xl font-bold mb-4 border-b pb-2"><span class="text-emergency-600">3.</span> Acidocétose diabétique (ACD)</h2>
+
+ <h3 class="font-bold text-slate-800 mb-2">3.1 Diagnostic</h3>
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs mb-4">
+  <div class="bg-medical-50 border border-medical-100 p-3 rounded-lg">
+   <b class="block text-sm text-medical-800">🔷 Critères 2024 (les 3)</b>
+   <ul class="space-y-1 mt-1"><li>• Glycémie ≥ 2,00 g/L <b>ou</b> diabète connu.</li><li>• Cétonémie (β-hydroxybutyrate) ≥ 3,0 mmol/L <b>ou</b> cétonurie ≥ 2+.</li><li>• pH &lt; 7,30 <b>et/ou</b> bicarbonates &lt; 18 mmol/L.</li></ul>
+   <p class="mt-2"><b>Gravité :</b> légère (β-OHB 3–6 ; pH 7,25–7,30 ; HCO₃⁻ 15–18), modérée (pH 7,0–7,25 ; HCO₃⁻ 10–15), <b>sévère</b> (β-OHB &gt; 6 ; pH &lt; 7,0 ; HCO₃⁻ &lt; 10 ; stupeur ou coma : réanimation).</p>
+  </div>
+  <div class="bg-amber-50 border border-amber-200 p-3 rounded-lg">
+   <b class="block text-sm text-amber-900">🔶 Diagnostic présomptif sans bicarbonate ni gaz du sang</b>
+   <p class="mt-1">Ne pas attendre la biologie. ACD présumée si : <b>hyperglycémie (≥ 2,00 g/L) + cétonurie ≥ 2+ + signes d’acidose</b> (dyspnée de Kussmaul, vomissements, douleurs abdominales, déshydratation, obnubilation).</p>
+   <p class="mt-1"><b>Diagnostics différentiels :</b> cétose de jeûne ou alcoolique (glycémie basse ou modérée, sans Kussmaul), SHH, sepsis, acidose lactique (metformine, paludisme).</p>
+  </div>
+ </div>
+
+ <div class="bg-slate-50 border-2 border-slate-300 p-4 rounded-xl mb-5">
+  <h4 class="font-bold text-sm mb-1">Trou anionique : que faire sans bicarbonate ?</h4>
+  <p class="text-xs mb-2 font-mono text-center bg-white border rounded p-1.5">Trou anionique = Na⁺ − (Cl⁻ + HCO₃⁻) · normal 8 à 12 mmol/L</p>
+  <ul class="text-xs space-y-1.5">
+   <li>• <b>Le calcul est impossible sans bicarbonate.</b> Il est d’ailleurs <b>retiré des critères diagnostiques en 2024</b> au profit de la cétonémie.</li>
+   <li>• <b>Na − Cl ne le remplace pas :</b> dans une acidose cétosique pure, le bicarbonate baisse autant que le trou anionique monte, donc Na − Cl <u>reste normal (≈ 36)</u>. Cet indice ne détecte que l’acidose hyperchlorémique.</li>
+   <li>• <b>Alternatives réellement utiles :</b> (1) demander au laboratoire la <b>réserve alcaline</b> ou le <b>CO₂ total</b> (équivalents du bicarbonate), (2) <b>capnographie</b> si disponible (CO₂ expiré ≤ 21–23 mmHg très évocateur d’acidose), (3) clinique : fréquence respiratoire et Kussmaul, (4) cétonurie + glycémie.</li>
+   <li>• Un <b>ionogramme (Na, K, Cl)</b> reste précieux : kaliémie, natrémie corrigée, osmolalité efficace. Le chlore sert à repérer l’acidose hyperchlorémique qui apparaît sous NaCl 0,9 % en cours de traitement (Na − Cl &lt; 30 alors que la cétose régresse).</li>
+  </ul>
+ </div>
+
+ <h3 class="font-bold text-slate-800 mb-2">3.2 Traitement</h3>
+ <div class="space-y-5">
+  <div class="border-l-4 border-medical-600 pl-4">
+   <h4 class="font-bold text-medical-800">Étape 1 · Réhydratation (priorité)</h4>
+   <div class="mt-1 text-xs space-y-1 bg-slate-50 p-3 rounded-lg border">
+    <p>• Déficit moyen ≈ 100 mL/kg. <b>1ère heure : NaCl 0,9 % 15 à 20 mL/kg (≈ 1 L).</b> Si choc : bolus de 500 mL à 1 L, réévaluation rapide, vasopresseurs si échec.</p>
+    <p>• Puis 500 mL/h pendant 2 à 4 h, puis 250 mL/h (1 L/4 h), selon hémodynamique, diurèse et <b>natrémie corrigée</b> (voir calculateur).</p>
+    <p>• <b>Dès que la glycémie est &lt; 2,50 g/L</b> : passer au <b>G5 %</b> enrichi en <b>NaCl 4 à 6 g/L</b> et en KCl selon la kaliémie, <u>sans arrêter l’insuline</u> (étape 3).</p>
+   </div>
+  </div>
+
+  <div class="border-l-4 border-amber-500 pl-4">
+   <h4 class="font-bold text-amber-900">Étape 2 · Potassium</h4>
+   <p class="text-xs text-red-700 font-bold mt-1">L’insuline fait entrer le potassium dans les cellules : pas d’insuline sans kaliémie connue ou sans mesure de sécurité.</p>
+   <div class="mt-2 grid grid-cols-1 md:grid-cols-3 gap-2 text-xs">
+    <div class="bg-red-50 p-3 rounded border border-red-200"><b class="text-red-800 block">K⁺ &lt; 3,5 mmol/L</b><b>Retarder l’insuline.</b> KCl 10 à 20 mmol/h (0,75 à 1,5 g/h) sous surveillance ECG, voie centrale si possible. Reprendre l’insuline dès K⁺ &gt; 3,5.</div>
+    <div class="bg-emerald-50 p-3 rounded border border-emerald-200"><b class="text-emerald-800 block">K⁺ 3,5 à 5,0</b>Insuline. KCl <b>0,75 à 1,5 g par litre</b> (10 à 20 mmol/L) pour garder K⁺ à 4–5 ; jusqu’à 2 g/L en pratique si K⁺ reste bas.</div>
+    <div class="bg-slate-100 p-3 rounded border"><b class="block">K⁺ &gt; 5,0</b>Pas de KCl. Insuline seule ; recontrôle 2 h après le début de l’insuline, puis toutes les 4 h ; débuter le KCl dès que K⁺ &lt; 5,0.</div>
+   </div>
+   <ul class="text-[11px] text-slate-600 mt-2 space-y-1">
+    <li>• Diurèse présente (≥ 50 mL/h) avant tout apport. Voie périphérique : concentration ≤ 3 g/L et débit modéré (≤ 1 g/h hors surveillance continue).</li>
+    <li>🔶 <b>Kaliémie indisponible :</b> ECG. Ondes T amples et pointues : pas de KCl. T plates, onde U, QT long : K⁺ bas, traiter comme tel. ECG normal et diurèse : KCl 1 g/L après la 1ère heure de remplissage. Dès qu’un dosage est possible, l’utiliser. À valider localement.</li>
+    <li>• Contrôle de la kaliémie toutes les 2 à 4 h. Bicarbonate : <b>non systématique</b> (seulement si pH &lt; 7,0 mesuré). Phosphore et magnésium non systématiques.</li>
+   </ul>
+  </div>
+
+  <div class="border-l-4 border-red-600 pl-4">
+   <h4 class="font-bold text-red-800">Étape 3 · Insuline</h4>
+   <p class="text-xs mt-1">🔷 <b>Référence :</b> insuline rapide IV continue à <b>0,1 UI/kg/h</b> (0,14 UI/kg/h sans bolus accepté), après K⁺ &gt; 3,5. <b>Objectif de baisse : 0,5 à 0,75 g/L par heure.</b> Si la baisse est insuffisante après la 1ère heure : vérifier l’hydratation et la voie, puis doubler la dose horaire jusqu’à obtenir la baisse visée.</p>
+   <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+    <div class="bg-slate-50 p-3 rounded-lg border">
+     <b class="text-medical-800 block mb-1">Option A · Perfusion au goutte-à-goutte (burette)</b>
+     <ul class="space-y-1"><li>• 50 UI d’insuline rapide dans 500 mL de NaCl 0,9 % = 0,1 UI/mL. Purger les 50 premiers mL (adsorption dans la tubulure).</li><li>• Débit mL/h = UI/h × 10. Gouttes/min = mL/h × facteur de goutte / 60 (20 gouttes/mL : 70 kg → 70 mL/h ≈ 23 gouttes/min).</li><li>• <b>Utiliser une burette</b> et une surveillance infirmière rapprochée : un goutte-à-goutte non contrôlé dérive.</li></ul>
+    </div>
+    <div class="bg-amber-50 p-3 rounded-lg border border-amber-200">
+     <b class="text-amber-900 block mb-1">🔶 Option B · Bolus IV horaire (votre protocole)</b>
+     <ul class="space-y-1"><li>• Insuline rapide en bolus IV chaque heure + glycémie capillaire horaire.</li><li>• <b>Dose adaptée au poids : 0,1 UI/kg/h</b> (≈ 5 UI à 50 kg, 7 UI à 70 kg). <b>10 UI fixes</b> = 0,14 UI/kg/h à 70 kg (acceptable), mais 0,2 UI/kg/h à 50 kg (excessif : hypoglycémie, hypokaliémie).</li><li>• Demi-vie IV courte : pics et creux, d’où la nécessité de la glycémie <b>horaire</b>. Un bolus IM horaire à la même dose est une variante décrite si l’état hémodynamique est conservé.</li></ul>
+    </div>
+    <div class="bg-slate-50 p-3 rounded-lg border">
+     <b class="text-medical-800 block mb-1">Option C · Sous-cutanée (cas limité)</b>
+     <ul class="space-y-1"><li>• Seulement ACD <b>légère à modérée</b>, patient conscient, sans choc ni vomissements incoercibles.</li><li>• Données publiées avec des <b>analogues rapides</b> : 0,3 UI/kg puis 0,2 UI/kg à 1 h, puis 0,2 UI/kg toutes les 2 h, puis 0,1 UI/kg/2 h une fois la glycémie &lt; 2,50 g/L. À vérifier avant usage.</li><li>• <b>Pas de schéma fixe toutes les 4 h</b> (non validé), surtout avec une insuline ordinaire.</li></ul>
+    </div>
+   </div>
+   <div class="mt-3 bg-red-50 border border-red-200 p-3 rounded-lg text-xs">
+    <b class="text-red-800">⚠ Atteindre 2,50 g/L n’est pas l’objectif final.</b> À ce stade : <b>G5 % + NaCl + KCl</b> et <b>réduire l’insuline de moitié</b> (≈ 0,05 UI/kg/h ; en bolus horaire : 3 à 5 UI/h), en visant <b>1,50 à 2,00 g/L jusqu’à la résolution de la cétose</b>. Si glycémie &lt; 1,50 : réduire encore ; &lt; 1,00 : suspendre et administrer du glucose. Arrêter l’insuline trop tôt provoque une rechute de la cétose.
+   </div>
+  </div>
+ </div>
+
+ <h3 class="font-bold text-slate-800 mt-6 mb-2">3.3 Surveillance</h3>
+ <div class="overflow-x-auto"><table class="w-full text-left text-xs border">
+  <thead class="bg-slate-100 font-bold"><tr><th class="p-2">Paramètre</th><th class="p-2">Fréquence</th><th class="p-2">Remarque</th></tr></thead>
+  <tbody class="divide-y">
+   <tr><td class="p-2">Glycémie capillaire</td><td class="p-2">Toutes les heures</td><td class="p-2">Contrôler sur prélèvement veineux si discordance</td></tr>
+   <tr><td class="p-2">Diurèse, fréquence respiratoire, conscience</td><td class="p-2">Toutes les heures</td><td class="p-2">Diurèse cible &gt; 0,5 mL/kg/h</td></tr>
+   <tr><td class="p-2">Kaliémie, natrémie, chlore</td><td class="p-2">Toutes les 2 à 4 h</td><td class="p-2">ECG en continu ou répété si pas de dosage</td></tr>
+   <tr><td class="p-2">Cétonurie</td><td class="p-2">Toutes les 2 à 4 h</td><td class="p-2">Tendance seulement (voir 3.4)</td></tr>
+   <tr><td class="p-2">Réserve alcaline / bicarbonate, cétonémie</td><td class="p-2">Toutes les 4 h si disponibles</td><td class="p-2">Critères de résolution</td></tr>
+  </tbody></table></div>
+ <p class="text-xs text-slate-700 mt-2"><b>Facteur déclenchant (toujours le chercher) :</b> infection (paludisme, typhoïde, pneumonie, infection urinaire, sepsis), infarctus (ECG), AVC, arrêt ou réduction d’insuline, corticoïdes, iSGLT2, diabète inaugural. <b>Antibiotiques</b> dès qu’une infection est suspectée. <b>HBPM</b> préventive si alitement prolongé, SHH ou facteurs thrombotiques.</p>
+
+ <h3 class="font-bold text-slate-800 mt-6 mb-2">3.4 Déclarer la fin de la cétose sans cétonémie</h3>
+ <div class="bg-red-50 border border-red-200 p-3 rounded-lg text-xs mb-3">
+  <b class="text-red-900">⚠ La bandelette urinaire ne peut pas servir à décréter la guérison.</b> Elle détecte l’acétoacétate, pas le β-hydroxybutyrate (le corps cétonique dominant). Pendant le traitement, le β-OHB se convertit en acétoacétate : la bandelette peut <b>rester positive, voire s’intensifier, plusieurs heures après la correction de l’acidose</b>. Ne pas prolonger l’insuline à forte dose uniquement pour une bandelette positive.
+ </div>
+ <div class="bg-amber-50 border border-amber-200 p-4 rounded-xl text-xs">
+  <b class="text-amber-900 block mb-1">🔶 Résolution présomptive : réunir tous ces critères</b>
+  <ol class="list-decimal pl-4 space-y-1">
+   <li><b>Plus de dyspnée de Kussmaul</b>, fréquence respiratoire normale (&lt; 20/min).</li>
+   <li><b>Plus de nausées, vomissements ni douleurs abdominales</b> ; alimentation orale tolérée (retour de la faim).</li>
+   <li><b>Conscience normale</b> et hémodynamique stable, diurèse normale.</li>
+   <li><b>Glycémie stable à 1,50–2,00 g/L</b> sous apport de glucose et insuline réduite, depuis plusieurs heures.</li>
+   <li>Cétonurie <b>en nette régression</b> (au moins 2 grades par rapport au pic), tendance seulement.</li>
+   <li>Délai écoulé : l’ACD se corrige en général en 12 à 24 h ; avant 8 à 12 h de traitement, rester prudent.</li>
+   <li><b>Si disponibles :</b> réserve alcaline ou bicarbonates ≥ 18 mmol/L, ou cétonémie &lt; 0,6 mmol/L (critères 2024 : cétonémie &lt; 0,6 et pH ≥ 7,3 ou HCO₃⁻ ≥ 18).</li>
+  </ol>
+  <p class="mt-2">Si un critère clinique manque, poursuivre le protocole. Pas de gaz du sang et pas de bicarbonate : la résolution reste <b>présomptive</b> et se juge sur l’ensemble.</p>
+ </div>
+
+ <h3 class="font-bold text-slate-800 mt-6 mb-2">3.5 Relais sous-cutané</h3>
+ <p class="text-xs bg-slate-100 p-3 rounded-lg">Dose totale quotidienne indicative en DT1 : 0,5 à 0,8 UI/kg/j (moitié en basale). <b>Injecter l’insuline basale 1 à 2 h avant l’arrêt de la perfusion</b> (analogue lent) ou <b>2 à 4 h</b> avant (NPH), et l’insuline rapide avant le repas. N’arrêter l’insuline IV qu’après ce chevauchement, sinon rechute de cétose. Poursuivre la surveillance glycémique rapprochée 24 h.</p>
+</section>
+
+<section id="u-shh" class="bg-white rounded-xl shadow-sm p-6">
+ <h2 class="text-xl font-bold mb-4 border-b pb-2"><span class="text-emergency-600">4.</span> Syndrome hyperosmolaire hyperglycémique (SHH)</h2>
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div class="bg-purple-50 border border-purple-200 p-4 rounded-xl text-xs space-y-2">
+   <h3 class="font-bold text-purple-900 text-sm">Critères 2024 (les 4)</h3>
+   <ul class="list-disc pl-4 space-y-1">
+    <li>Glycémie ≥ 6,00 g/L (33,3 mmol/L).</li>
+    <li><b>Osmolalité efficace &gt; 300 mOsm/kg</b> (ou totale &gt; 320). Osmolalité efficace = 2 × Na⁺ + glycémie en mmol/L (glycémie en g/L × 5,55).</li>
+    <li>Cétonémie &lt; 3,0 mmol/L ou cétonurie &lt; 2+.</li>
+    <li>pH ≥ 7,30 et bicarbonates ≥ 15 mmol/L (sans mesure : absence de Kussmaul et d’acidose clinique).</li>
+   </ul>
+   <p>Sujet âgé, DT2, déclenché par infection, AVC, diurétiques. <b>Natrémie corrigée</b> = Na + 1,6 × (glycémie g/L − 1) (jusqu’à 2,4 au-delà de 4 g/L).</p>
+  </div>
+  <div class="bg-white border p-4 rounded-xl text-xs space-y-2">
+   <h3 class="font-bold text-sm">Prise en charge</h3>
+   <ol class="list-decimal pl-4 space-y-1.5">
+    <li><b>Remplissage :</b> NaCl 0,9 % 15 à 20 mL/kg la 1ère heure, puis adapté à la natrémie corrigée (NaCl 0,45 % si elle est élevée une fois l’hémodynamique stabilisée). Baisse de l’osmolalité lente (≤ 3 mOsm/kg/h).</li>
+    <li><b>Insuline :</b> après K⁺ &gt; 3,5 et remplissage initial, 0,05 UI/kg/h. Objectif 2,00 à 2,50 g/L jusqu’à résolution (osmolalité &lt; 300, diurèse &gt; 0,5 mL/kg/h, conscience améliorée).</li>
+    <li><b>Potassium :</b> mêmes règles que l’ACD.</li>
+    <li><b>HBPM préventive</b> systématique. Traitement de la cause. Soins infirmiers (escarres, sondage).</li>
+   </ol>
+  </div>
+ </div>
+</section>
+
+<section id="u-eug" class="bg-white rounded-xl shadow-sm p-6">
+ <h2 class="text-xl font-bold mb-3 border-b pb-2"><span class="text-emergency-600">5.</span> Acidocétose euglycémique (sous iSGLT2)</h2>
+ <ul class="text-xs space-y-1.5 bg-amber-50 border border-amber-200 p-4 rounded-xl">
+  <li>• <b>Piège :</b> acidose et cétose sévères avec une glycémie &lt; 2,00 g/L, parfois normale. Faire une cétonurie ou une cétonémie à tout patient sous iSGLT2 malade, qui vomit ou qui jeûne.</li>
+  <li>• <b>Déclenchants :</b> jeûne, chirurgie, infection, réduction brutale d’insuline, alcool, régime très pauvre en glucides, DT1 ou LADA méconnu.</li>
+  <li>• <b>Conduite :</b> arrêt immédiat de l’iSGLT2 ; <b>glucose (G5 à G10 %) associé à une insuline IV</b> dès le début pour freiner la cétogenèse ; remplissage, potassium ; même critères de résolution que l’ACD. Ne pas reprendre l’iSGLT2 sans avis spécialisé (arrêt 3 jours avant chirurgie programmée).</li>
+ </ul>
+</section>
+
+<section id="u-calc" class="bg-slate-800 text-white rounded-xl shadow-sm p-6 pb print:bg-white print:text-black">
+ <h2 class="text-xl font-bold mb-3">6. Calculateur par poids</h2>
+ <div class="grid grid-cols-2 md:grid-cols-5 gap-3 text-xs text-slate-800">
+  <label class="text-white print:text-black">Poids (kg)<input id="u_p" type="number" step="any" oninput="calcUrg()" class="w-full p-2 rounded text-slate-800 mt-1"></label>
+  <label class="text-white print:text-black">Glycémie (g/L)<input id="u_g" type="number" step="any" oninput="calcUrg()" class="w-full p-2 rounded text-slate-800 mt-1"></label>
+  <label class="text-white print:text-black">Natrémie (mmol/L)<input id="u_na" type="number" step="any" oninput="calcUrg()" class="w-full p-2 rounded text-slate-800 mt-1"></label>
+  <label class="text-white print:text-black">Facteur de goutte<select id="u_df" onchange="calcUrg()" class="w-full p-2 rounded text-slate-800 mt-1"><option value="20">20 gouttes/mL</option><option value="15">15 gouttes/mL</option><option value="60">60 (microgoutte)</option></select></label>
+  <label class="text-white print:text-black">Insuline ordinaire en bolus fixe (UI)<input id="u_fx" type="number" step="any" value="10" oninput="calcUrg()" class="w-full p-2 rounded text-slate-800 mt-1"></label>
+ </div>
+ <div id="u_out" class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2 text-xs"></div>
+ <p class="text-[11px] text-slate-300 print:text-slate-600 mt-3">Valeurs indicatives pour l’adulte : elles ne remplacent pas le jugement clinique. Les protocoles marqués 🔶 sont des adaptations de terrain.</p>
+</section>
+
+ <p class="text-[11px] text-slate-500">Seuils : consensus ADA/EASD/JBDS/AACE/DTS 2024 (Diabetes Care 2024 ; Diabetologia 2024). Adaptations ressources limitées : à valider avec votre service de réanimation.</p>
+</div></div>
+<div id="mod-chroniques" class="module"><div class="space-y-8 text-sm">
+ <div class="bg-medical-800 text-white rounded-xl p-5 flex flex-wrap justify-between items-center gap-3">
+  <div><h2 class="text-2xl font-extrabold">Complications chroniques du diabète</h2><p class="text-sm text-medical-100 mt-1">Dépistage, stratification du risque et prise en charge (ADA / EASD / ESC / KDIGO / IWGDF)</p></div>
+  <button type="button" onclick="window.print()" class="no-print bg-white text-medical-800 font-bold px-4 py-2 rounded-lg text-xs shadow">🖨 Imprimer / PDF</button>
+ </div>
+ <section id="c-patient" class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-amber-500">
+  <h2 class="text-lg font-bold mb-2">Suivi personnalisé du patient de l’assistant</h2>
+  <div id="ch-synth" class="text-xs"></div>
+ </section>
+ <div class="no-print flex flex-wrap gap-2 text-xs">
+  <a href="#c-retino" class="bg-white border px-3 py-1.5 rounded-full font-semibold">Rétine</a><a href="#c-nephro" class="bg-white border px-3 py-1.5 rounded-full font-semibold">Rein</a><a href="#c-neuro" class="bg-white border px-3 py-1.5 rounded-full font-semibold">Nerfs</a><a href="#c-macro" class="bg-white border px-3 py-1.5 rounded-full font-semibold">Cœur et artères</a><a href="#c-pied" class="bg-white border px-3 py-1.5 rounded-full font-semibold">Pied</a><a href="#c-calendrier" class="bg-white border px-3 py-1.5 rounded-full font-semibold">Calendrier</a><a href="#c-autres" class="bg-white border px-3 py-1.5 rounded-full font-semibold">Autres atteintes</a>
+ </div>
+
+        <section id="c-vue" class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-medical-600">
+            <h2 class="text-xl font-bold text-slate-800 mb-2">1. Vue d'Ensemble des Atteintes Chroniques</h2>
+            <p class="text-sm text-slate-600">
+                Les complications chroniques résultent de l'exposition prolongée à l'hyperglycémie, potentialisée par l'hypertension artérielle, la dyslipidémie et le tabagisme. Elles se divisent en atteintes <strong>microvasculaires</strong> (propres au diabète), <strong>macrovasculaires</strong> (athérosclérose accélérée) et <strong>intriquées</strong> (pied diabétique).
+            </p>
+        </section>
+
+        <section id="c-micro" class="bg-white rounded-xl shadow-sm p-6 space-y-6">
+            <h2 class="text-xl font-bold text-slate-800 border-b pb-2 flex items-center gap-2">
+                <span class="text-medical-600">2.</span> Complications Microvasculaires
+            </h2>
+
+            <div id="c-retino" class="space-y-3">
+                <h3 class="font-bold text-slate-800 text-base flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 bg-medical-600 rounded-full"></span>
+                    A. Rétinopathie Diabétique (cause majeure de cécité chez l'adulte actif)
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    <div class="bg-slate-50 p-4 rounded-lg border">
+                        <span class="font-bold text-medical-800 block mb-1">🔍 Protocoles de Dépistage Systématique</span><ul class="space-y-1.5 text-slate-700"><li>• <strong>DT2 :</strong> fond d’œil dilaté ou rétinographie <strong>dès le diagnostic</strong> (rétinopathie souvent déjà présente), puis tous les 1 à 2 ans si normal et bien équilibré ; <strong>annuel au minimum</strong> dès qu’une rétinopathie existe.</li><li>• <strong>DT1 :</strong> premier examen dans les 5 ans après le diagnostic (dès la puberté), puis annuel.</li><li>• <strong>Grossesse (diabète préexistant) :</strong> avant la conception ou au 1er trimestre, puis chaque trimestre et jusqu’à 1 an après l’accouchement selon la gravité.</li><li>• <strong>Avis ophtalmologique rapide :</strong> baisse d’acuité, rétinopathie sévère ou proliférante, œdème maculaire. Mesurer l’acuité visuelle à chaque bilan.</li><li>• Ressources limitées : fond d’œil dilaté par un médecin formé et acuité visuelle systématique, ophtalmologue pour toute anomalie.</li></ul>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-lg border">
+                        <span class="font-bold text-medical-800 block mb-1">💊 Prise en Charge & Traitement</span><ul class="space-y-1.5 text-slate-700"><li>• <strong>Prévention :</strong> équilibre glycémique et tensionnel (PA &lt; 130/80 mmHg), lipides ; éviter une baisse très rapide de l’HbA1c si rétinopathie évoluée (aggravation précoce transitoire).</li><li>• <strong>Rétinopathie proliférante ou non proliférante sévère :</strong> photocoagulation panrétinienne au laser (PPR) ; hémorragie du vitré ou décollement : vitrectomie.</li><li>• <strong>Œdème maculaire touchant le centre :</strong> anti-VEGF intravitréens en 1ère intention (corticoïdes en 2e ligne) ; laser focal ou en grille si anti-VEGF inaccessible (coût).</li><li>• Fénofibrate : peut ralentir la progression d’une rétinopathie existante. Avant d’intensifier le traitement (aGLP-1 notamment) en cas de rétinopathie évoluée, faire examiner le fond d’œil.</li></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="c-nephro" class="space-y-3 pt-4 border-t">
+                <h3 class="font-bold text-slate-800 text-base flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 bg-medical-600 rounded-full"></span>
+                    B. Néphropathie Diabétique / Maladie Rénale Chronique (MRC)
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    <div class="bg-slate-50 p-4 rounded-lg border">
+                        <span class="font-bold text-medical-800 block mb-1">🔍 Dépistage Annuel Bipartite</span><ul class="space-y-1.5 text-slate-700"><li>• <strong>Rapport albuminurie / créatininurie (RAC) :</strong><br>- Normal : &lt; 30 mg/g (A1)<br>- Modérément augmenté : 30 à 300 mg/g (A2, alerte précoce)<br>- Fortement augmenté : &gt; 300 mg/g (A3)</li><li>• <strong>DFGe (CKD-EPI 2021) :</strong> à partir de la créatininémie, stades G1 à G5.</li><li>• <strong>Confirmation :</strong> 2 prélèvements anormaux sur 3 en 3 à 6 mois (éliminer fièvre, effort, infection urinaire, hématurie). Dépistage dès le diagnostic en DT2, 5 ans après en DT1, puis annuel. Sans RAC : bandelette urinaire en orientation.</li><li>• <strong>Rein et rétine :</strong> une albuminurie sans rétinopathie, ou une hématurie, fait chercher une autre cause (drépanocytose, VIH, glomérulopathie).</li></ul>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-lg border">
+                        <span class="font-bold text-medical-800 block mb-1">💊 Néphroprotection & Traitement</span><ul class="space-y-1.5 text-slate-700"><li>• <strong>IEC ou ARA2 à dose maximale tolérée :</strong> recommandé si HTA avec RAC ≥ 30 mg/g, surtout &gt; 300 ; chez le normotendu avec albuminurie, bénéfice moins établi (à discuter). Créatininémie et kaliémie 1 à 2 semaines après l’introduction (hausse de créatinine ≤ 30 % acceptable). Jamais IEC + ARA2.</li><li>• <strong>iSGLT2</strong> si DFGe ≥ 20 : ralentissent le déclin du DFGe et réduisent les événements rénaux et cardiovasculaires.</li><li>• <strong>Finérénone</strong> si RAC persistante ≥ 30 sous IEC/ARA2 maximal, DFGe ≥ 25 et K⁺ ≤ 5,0 ; <strong>sémaglutide</strong> : bénéfice rénal démontré.</li><li>• <strong>Éviter les néphrotoxiques :</strong> AINS, produits de contraste sans hydratation, décoctions et plantes ; metformine : réduire si DFGe &lt; 45, arrêter si &lt; 30 ; adapter insuline, sulfamides, gabapentinoïdes.</li><li>• <strong>Avis néphrologique :</strong> DFGe &lt; 30, RAC &gt; 300 d’emblée, chute rapide du DFGe (&gt; 5 mL/min/an), hématurie.</li></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="c-neuro" class="space-y-3 pt-4 border-t">
+                <h3 class="font-bold text-slate-800 text-base flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 bg-medical-600 rounded-full"></span>
+                    C. Neuropathie Diabétique (Périphérique & Autonome)
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    <div class="bg-slate-50 p-4 rounded-lg border">
+                        <span class="font-bold text-medical-800 block mb-1">🔍 Formes Cliniques & Dépistage</span><ul class="space-y-1.5 text-slate-700"><li>• <strong>Polyneuropathie distale :</strong> symétrique « en chaussette » ; dépistage annuel (dès le diagnostic en DT2, 5 ans après en DT1) : monofilament 10 g <u>plus</u> un second test (diapason 128 Hz, piqûre, réflexes achilléens).</li><li>• <strong>Neuropathie autonome :</strong> tachycardie de repos, hypotension orthostatique (baisse ≥ 20/10 mmHg à 3 min), gastroparésie, constipation ou diarrhée, vessie neurogène, dysfonction érectile, anhidrose, hypoglycémies inaperçues.</li><li>• <strong>Neuropathie autonome cardiaque :</strong> instabilité peropératoire et risque d’arythmie ; prudence avec les médicaments allongeant le QT.</li><li>• <strong>Traitements :</strong> hypotension orthostatique (mesures posturales, fludrocortisone ou midodrine) ; gastroparésie (repas fractionnés, métoclopramide en cure courte) ; dysfonction érectile (inhibiteur de PDE5, contre-indiqué avec les dérivés nitrés).</li></ul>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-lg border">
+                        <span class="font-bold text-medical-800 block mb-1">💊 Traitement des Douleurs Neuropathiques</span><ul class="space-y-1.5 text-slate-700"><li>• Paracétamol et AINS : peu efficaces dans la douleur neuropathique.</li><li>• <strong>1ère intention :</strong> prégabaline ou gabapentine (adapter au DFGe, somnolence), duloxétine, ou amitriptyline à faible dose (peu coûteuse ; prudence chez le sujet âgé ou cardiaque).</li><li>• Douleur localisée : patch de lidocaïne ou de capsaïcine. Éviter tramadol et opioïdes forts.</li><li>• Un équilibre glycémique stable prévient ou ralentit la neuropathie (nettement en DT1, plus modestement en DT2) ; une baisse trop brutale de l’HbA1c peut déclencher une neuropathie douloureuse aiguë.</li><li>• Éliminer les autres causes : carence en B12 (metformine), alcool, hypothyroïdie, insuffisance rénale, VIH, médicaments neurotoxiques.</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="c-macro" class="bg-white rounded-xl shadow-sm p-6 space-y-4">
+            <h2 class="text-xl font-bold text-slate-800 border-b pb-2 flex items-center gap-2">
+                <span class="text-medical-600">3.</span> Complications Macrovasculaires (Athérosclérose)
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                <div class="p-4 bg-slate-50 rounded-lg border">
+                    <span class="font-bold text-slate-800 block text-sm mb-1">Coronaropathie (IDM)</span>
+                    <p class="text-slate-600 mb-2">Infarctus du myocarde et angor. ⚠️ <strong>Souvent indolore ou atypique</strong> (simple dyspnée d'effort ou fatigue) chez le diabétique par dénervation autonome.</p>
+                    <span class="font-semibold text-medical-800 block">Dépistage : ECG de repos au bilan initial, puis si symptômes, HTA ou atteinte d’organe ; pas d’épreuve d’effort systématique chez l’asymptomatique.</span>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-lg border">
+                    <span class="font-bold text-slate-800 block text-sm mb-1">Accidents Vasculaires (AVC)</span>
+                    <p class="text-slate-600 mb-2">Risque d'AVC ischémique environ doublé. Nécessite une recherche de souffle carotidien et un bilan au moindre AIT.</p>
+                    <span class="font-semibold text-medical-800 block">Cible PA : &lt; 130/80 mmHg sans descendre sous 120 de systolique.</span>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-lg border">
+                    <span class="font-bold text-slate-800 block text-sm mb-1">Artériopathie des Membres (AOMI)</span>
+                    <p class="text-slate-600 mb-2">Claudication intermittente à la marche, douleurs de décubitus, refroidissement des pieds et abolition des pouls pédieux/tibiaux.</p>
+                    <span class="font-semibold text-medical-800 block">Dépistage : pouls pédieux et tibiaux, IPS (&lt; 0,9 : AOMI ; &gt; 1,4 : artères incompressibles, pression d’orteil).</span>
+                </div>
+            </div>
+
+            <!-- Prise en charge cardiovasculaire globale -->
+            <div class="bg-medical-50 p-4 rounded-xl border border-medical-200 text-xs space-y-2">
+                <span class="font-bold text-medical-800 text-sm block">🛡️ Stratégie de Protection Cardiovasculaire Intégrée (ESC / ADA) :</span>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                    <div><strong>1. Statine Forte Intensité :</strong> Cibler LDL &lt; 0,55 g/L (Risque très élevé) ou &lt; 0,70 g/L (Risque élevé).</div>
+                    <div><strong>2. Anti-agrégant Plaquettaire :</strong> Aspirine 75–100 mg/j en prévention secondaire (clopidogrel si intolérance) ; non systématique en prévention primaire.</div>
+                    <div><strong>4. Insuffisance cardiaque :</strong> la rechercher (dyspnée, œdèmes ; NT-proBNP ou échocardiographie) ; iSGLT2 recommandés, éviter la pioglitazone.</div>
+                    <div><strong>3. Molécules Cardioprotectrices :</strong> iSGLT2 ou Analogues du GLP-1 recommandés en cas de MCVA avérée.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="c-pied" class="bg-white rounded-xl shadow-sm p-6 space-y-4 border-2 border-amber-300">
+            <div class="flex justify-between items-center border-b pb-2">
+                <h2 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                    <span class="text-amber-600">4.</span> Le Pied Diabétique & Catégories de Risque (IWGDF 2023)
+                </h2>
+                <span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-1 rounded font-bold">Prévention des Amputations</span>
+            </div>
+
+            <p class="text-xs text-slate-600">
+                Le pied diabétique est le carrefour de la <strong>neuropathie</strong> (perte de sensibilité), de l'<strong>AOMI</strong> (défaut de cicatrisation) et de l'<strong>infection</strong>. L'examen des pieds doit être réalisé au moins une fois par an pour attribuer une catégorie de risque :
+            </p>
+
+            <!-- Tableau de Gradation -->
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs border-collapse">
+                    <thead>
+                        <tr class="bg-slate-100 text-slate-800 font-bold border-b">
+                            <th class="p-2.5">Grade</th>
+                            <th class="p-2.5">Caractéristiques Cliniques</th>
+                            <th class="p-2.5">Risque d'Ulcération</th>
+                            <th class="p-2.5">Rythme de Suivi Recommandé</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y text-slate-700">
+<tr><td class="p-2.5 font-bold text-emerald-700">Catégorie 0</td><td class="p-2.5">Ni perte de sensibilité (monofilament conservé), ni AOMI.</td><td class="p-2.5">Très faible</td><td class="p-2.5">Examen <strong>1 fois par an</strong>.</td></tr>
+<tr><td class="p-2.5 font-bold text-blue-700">Catégorie 1</td><td class="p-2.5"><strong>Perte de sensibilité</strong> ou <strong>AOMI</strong>, isolée.</td><td class="p-2.5">Faible</td><td class="p-2.5">Tous les <strong>6 à 12 mois</strong> + éducation.</td></tr>
+<tr><td class="p-2.5 font-bold text-amber-700">Catégorie 2</td><td class="p-2.5">Perte de sensibilité + AOMI, ou perte de sensibilité + <strong>déformation</strong> (orteils en griffe, hallux valgus), ou AOMI + déformation.</td><td class="p-2.5">Modéré</td><td class="p-2.5">Tous les <strong>3 à 6 mois</strong> + soins podologiques, chaussage thérapeutique.</td></tr>
+<tr><td class="p-2.5 font-bold text-red-700">Catégorie 3</td><td class="p-2.5">Perte de sensibilité ou AOMI, avec <strong>antécédent d’ulcère</strong>, d’amputation ou <strong>insuffisance rénale terminale</strong>.</td><td class="p-2.5">Élevé</td><td class="p-2.5">Tous les <strong>1 à 3 mois</strong> (équipe multidisciplinaire).</td></tr>
+</tbody>
+                </table>
+            </div>
+
+            <!-- Règle d'or éducation -->
+            <div class="bg-amber-50 p-3 rounded-lg border border-amber-200 text-xs text-amber-900 space-y-1">
+                <span class="font-bold block">💡 Conseils d'Éducation Vitaux pour le Patient :</span>
+                <p>• Ne jamais marcher pieds nus (même à domicile). Inspecter la plante des pieds chaque soir.</p>
+                <p>• Laver les pieds à l'eau tiède (tester la température avec le coude), bien sécher entre les orteils.</p>
+                <p>• Ne jamais couper les cors/durillons avec des lames tranchantes. Consulter en urgence pour toute rougeur ou plaie.</p>
+            </div>
+            <div class="bg-red-50 p-3 rounded-lg border border-red-200 text-xs text-red-900 space-y-1">
+                <span class="font-bold block">🚨 Pied à prise en charge urgente</span>
+                <p>• <strong>Ulcère :</strong> décharge (priorité), débridement, pansement adapté, recherche d’AOMI (pouls, IPS, pression d’orteil) ; test du stylet (os palpable : ostéite probable) et radiographie.</p>
+                <p>• <strong>Infection</strong> (rougeur &gt; 0,5 cm autour de la plaie, chaleur, pus, œdème) : prélèvement profond, antibiothérapie selon la gravité ; hospitalisation si signes généraux, ischémie critique ou abcès profond.</p>
+                <p>• <strong>Pied chaud, gonflé, peu douloureux chez un patient neuropathe :</strong> pied de Charcot jusqu’à preuve du contraire : décharge stricte immédiate, avis spécialisé.</p>
+                <p>• <strong>Ischémie critique</strong> (douleur de repos, gangrène) : avis vasculaire urgent pour revascularisation.</p>
+                <p>• <strong>Contexte africain :</strong> marche pieds nus, recours tardif (tradipraticiens, automédication) : éducation, chaussage accessible, consultation précoce.</p>
+            </div>
+        </section>
+
+    
+<section id="c-calendrier" class="bg-white rounded-xl shadow-sm p-6 space-y-3">
+ <h2 class="text-xl font-bold text-slate-800 border-b pb-2"><span class="text-medical-600">5.</span> Calendrier de dépistage</h2>
+ <div class="overflow-x-auto"><table class="w-full text-left text-xs border-collapse">
+  <thead><tr class="bg-slate-100 font-bold border-b"><th class="p-2.5">Atteinte</th><th class="p-2.5">DT2</th><th class="p-2.5">DT1</th><th class="p-2.5">Examen</th></tr></thead>
+  <tbody class="divide-y text-slate-700">
+   <tr><td class="p-2.5 font-semibold">Rétine</td><td class="p-2.5">Dès le diagnostic, puis tous les 1 à 2 ans</td><td class="p-2.5">Dans les 5 ans, puis annuel</td><td class="p-2.5">Acuité, fond d’œil dilaté ou rétinographie</td></tr>
+   <tr><td class="p-2.5 font-semibold">Rein</td><td class="p-2.5">Dès le diagnostic, puis annuel</td><td class="p-2.5">Après 5 ans, puis annuel</td><td class="p-2.5">DFGe + RAC (ou bandelette)</td></tr>
+   <tr><td class="p-2.5 font-semibold">Nerfs</td><td class="p-2.5">Dès le diagnostic, puis annuel</td><td class="p-2.5">Après 5 ans, puis annuel</td><td class="p-2.5">Monofilament + 2e test, symptômes autonomes, PA couchée/debout</td></tr>
+   <tr><td class="p-2.5 font-semibold">Pieds</td><td class="p-2.5" colspan="2">À chaque bilan, au moins annuel ; fréquence selon la catégorie IWGDF</td><td class="p-2.5">Inspection, pouls, monofilament, déformations</td></tr>
+   <tr><td class="p-2.5 font-semibold">Cœur et artères</td><td class="p-2.5" colspan="2">PA à chaque consultation ; lipides au diagnostic puis au moins annuel ; ECG initial puis selon symptômes</td><td class="p-2.5">PA, bilan lipidique, ECG, IPS si doute</td></tr>
+   <tr><td class="p-2.5 font-semibold">Foie</td><td class="p-2.5">FIB-4 annuel</td><td class="p-2.5">Si obésité ou enzymes élevées</td><td class="p-2.5">ASAT, ALAT, plaquettes, élastographie si intermédiaire</td></tr>
+  </tbody></table></div>
+</section>
+<section id="c-autres" class="bg-white rounded-xl shadow-sm p-6 space-y-3 text-xs text-slate-700">
+ <h2 class="text-xl font-bold text-slate-800 border-b pb-2"><span class="text-medical-600">6.</span> Autres complications et comorbidités à rechercher</h2>
+ <ul class="space-y-1.5">
+  <li>• <strong>Stéatose hépatique (MASLD) :</strong> très fréquente en DT2 ; FIB-4, puis élastographie si intermédiaire ou élevé.</li>
+  <li>• <strong>Infections :</strong> tuberculose (risque multiplié, chercher toux de plus de 2 semaines), infections urinaires et génitales mycosiques, parodontite, infections cutanées.</li>
+  <li>• <strong>Santé mentale :</strong> dépression et détresse liée au diabète, à dépister régulièrement ; troubles cognitifs chez le sujet âgé.</li>
+  <li>• <strong>Apnée du sommeil</strong> (obésité, HTA résistante), <strong>dysfonction sexuelle</strong>, <strong>risque de chute et de fracture</strong>.</li>
+  <li>• <strong>Vaccinations :</strong> grippe, pneumocoque, hépatite B, COVID-19 selon le calendrier national.</li>
+ </ul>
+</section><p class="text-[11px] text-slate-500">Complications chroniques : ADA, EASD, ESC, KDIGO, IWGDF 2023. Aide à la décision pour professionnels de santé.</p>
+</div></div>
+<div id="mod-medicaments" class="module"><div class="space-y-4 text-sm">
+ <div class="bg-medical-800 text-white rounded-xl p-5"><h2 class="text-2xl font-extrabold">Antidiabétiques par famille</h2><p class="text-sm text-medical-100 mt-1">Molécules, spécialités, posologie usuelle et points d’attention. † : ajouté en complément, absent de votre liste ; disponibilité locale à vérifier.</p></div>
+ <input id="med_q" type="search" placeholder="Rechercher une spécialité, une molécule ou une famille (ex. Galvus, gliclazide, insuline)" class="no-print w-full border rounded-lg px-3 py-2 text-sm bg-white shadow-sm">
+ <div id="med_list" class="space-y-3"></div>
+ <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-900"><b>Associations à éviter :</b> iDPP4 + aGLP-1 ; sulfamide + glinide ; deux sulfamides. <b>Metformine :</b> max 3 000 mg/j si DFGe ≥ 60, 2 000 mg/j entre 45 et 59, 1 000 mg/j entre 30 et 44, arrêt si &lt; 30. <b>Flacons d’insuline 100 UI/mL :</b> seringues U-100 uniquement.</div>
+</div></div>
+</main>
+<script>
+
+const $=id=>document.getElementById(id),f1=x=>(Math.round(x*10)/10).toString().replace('.',','),f2=x=>(Math.round(x*100)/100).toString().replace('.',','),r0=Math.round;
+const g=id=>{const e=$(id);if(!e)return null;if(e.type==='checkbox')return e.checked;if(e.value==='')return null;if(e.tagName==='SELECT')return e.value;const x=parseFloat(e.value);return isNaN(x)?null:x};
+const S={};
+/* ---------- constructeurs de champs ---------- */
+const CL='w-full p-2 border rounded-md text-sm focus:ring-2 focus:ring-medical-500 outline-none',LB='block text-xs font-medium text-slate-700 mb-1';
+const C=(id,l,d)=>`<label class="flex items-start gap-2 text-xs text-slate-700 cursor-pointer"><input type="checkbox" id="${id}" ${d?'checked':''} class="mt-0.5 rounded border-slate-300"><span>${l}</span></label>`;
+const N=(id,l,h,ph)=>`<div><label class="${LB}">${l}</label><input type="number" step="any" id="${id}" placeholder="${ph||''}" class="${CL}">${h?`<p class="text-[10px] text-slate-400 mt-1">${h}</p>`:''}</div>`;
+const L=(id,l,o)=>`<div><label class="${LB}">${l}</label><select id="${id}" class="${CL}">${o.map(x=>`<option value="${x[0]}">${x[1]}</option>`).join('')}</select></div>`;
+const D2=(a,b)=>`<div class="grid grid-cols-2 gap-3">${a}${b}</div>`;
+const G=(t,h,id,cls)=>`<div ${id?`id="${id}"`:''} class="space-y-3 ${cls||''}"><h3 class="font-semibold text-sm text-medical-700 border-b pb-1">${t}</h3>${h}</div>`;
+const BOX=(id,l)=>`<div class="bg-slate-50 p-3 rounded-lg border"><span class="block text-[10px] text-slate-500">${l}</span><span id="${id}" class="text-sm font-bold text-slate-700">--</span></div>`;
+/* ---------- étapes ---------- */
+const STEPS=[
+{t:'Diagnostic Initial',p:'Point 0',ok:'Établir le diagnostic',s:'Critères OMS / ADA : valeurs glycémiques et données anthropométriques',f:
+ G('Bilans glycémiques',
+  `<div class="bg-slate-50 p-3 rounded-lg border flex items-center justify-between"><span class="text-xs font-medium text-slate-700">HbA1c disponible ?</span><label class="inline-flex items-center gap-2 text-xs font-semibold text-slate-600"><input type="checkbox" id="hdispo" checked><span id="hlab">Oui</span></label></div>`+
+  N('gj','Glycémie veineuse à jeun (g/L)','Seuil diagnostique ≥ 1,26 g/L','ex : 1.85')+
+  `<div id="w_hba1c">${N('hba1c','HbA1c (%)','Seuil ≥ 6,5 % (48 mmol/mol) – facultative, prise en compte si fiable','ex : 8.8')}</div>`+
+  N('ga','Glycémie veineuse aléatoire (g/L)','≥ 2,00 g/L avec symptômes','ex : 2.10')+
+  N('hgpo','Glycémie 2 h après 75 g de glucose – HGPO (g/L)','≥ 2,00 g/L')+
+  C('sym','Symptômes cardinaux (polyurie, polydipsie, amaigrissement, asthénie)')+
+  C('jeune','Jeûne ≥ 8 h confirmé pour la glycémie « à jeun »',1)+
+  C('conf','Le même test a déjà été répété et reste anormal')+
+  C('interf','Interférence HbA1c : drépanocytose / trait AS-AC, anémie, carence martiale, transfusion récente, grossesse, IRC terminale')+
+  C('aigu','Contexte aigu ou iatrogène : infection sévère, AVC, infarctus, corticoïdes forte dose'))+
+ G('Données anthropométriques',
+  D2(L('sexe','Sexe',[['H','Homme'],['F','Femme']]),N('age','Âge (ans)',null,'ex : 54'))+
+  D2(N('poids','Poids (kg)',null,'ex : 90'),N('taille','Taille (cm)',null,'ex : 175'))+
+  D2(BOX('d_imc','IMC (kg/m²)'),BOX('d_stat','Statut pondéral'))+
+  N('tour_taille','Tour de taille (cm)','Risque métabolique : ≥ 94 cm (H) / ≥ 80 cm (F)','ex : 102'))},
+{t:'Typage & Syndrome Métabolique',p:'Point 1',ok:'Typer et évaluer le syndrome métabolique',s:'Questions guidées par l’algorithme étiologique ; critères NCEP-ATP III / IDF',f:
+ G('Typage du diabète',
+  G('1. Cause secondaire à éliminer',
+   C('s_pancr','Pancréatopathie : pancréatite chronique (dont calculeuse tropicale), pancréatectomie, mucoviscidose, hémochromatose')+
+   C('s_endo','Endocrinopathie : Cushing, acromégalie, phéochromocytome')+
+   C('s_drug','Médicament diabétogène : corticoïdes, antipsychotiques, tacrolimus, anti-PD1, antirétroviraux (inhibiteurs de protéase)'))+
+  `<div id="blkB" class="space-y-3">`+G('2. Orientation DT1 / DT2 / MODY',
+   N('age_diag','Âge au diagnostic (ans)','Par défaut : âge actuel')+
+   L('mode','Installation des symptômes',[['insidieux','Insidieuse ou découverte fortuite'],['brutal','Brutale (quelques semaines)']])+
+   C('amai','Amaigrissement marqué')+
+   L('cetose','Cétose ou cétonurie (bandelette)',[['nr','Non recherchée'],['absence','Absente'],['presence','Présente (+ à +++)']])+
+   C('autoimm','Maladie auto-immune associée (thyroïdite, vitiligo, maladie cœliaque)')+
+   L('ab','Auto-anticorps (anti-GAD, IA2, ZnT8)',[['nf','Non dosés / non disponibles'],['neg','Tous négatifs'],['pos','Au moins un positif']])+
+   `<div id="blk_pc">${L('pc','Peptide C',[['nf','Non réalisé'],['bas','Effondré (< 0,2 nmol/L ou < 0,6 ng/mL)'],['mid','Intermédiaire'],['hi','Conservé ou élevé (≥ 0,6 nmol/L ou ≥ 1,8 ng/mL)']])}</div>`+
+   C('fam_dt2','Antécédent familial de DT2 au 1er degré')+
+   `<div id="blk_mody">${C('fam3','Diabète sur 3 générations successives (transmission dominante : piste MODY)')}</div>`+
+   `<div id="w_dg">${C('atcd_dg','Antécédent de diabète gestationnel ou de macrosomie')}</div>`)+`</div>`)+
+ G('Syndrome métabolique (3 critères sur 5)',
+  `<div id="recap" class="text-[11px] bg-slate-50 border rounded-lg p-2 text-slate-600"></div>`+
+  D2(N('pas','PAS (mmHg)',null,'ex : 138'),N('pad','PAD (mmHg)',null,'ex : 86'))+
+  C('trt_hta','Traitement antihypertenseur en cours')+
+  N('tg','Triglycérides (g/L)','Critère ≥ 1,50 g/L','ex : 2.10')+C('trt_tg','Traitement hypotriglycéridémiant en cours')+
+  N('hdl','HDL-cholestérol (g/L)','Critère < 0,40 (H) / < 0,50 (F)','ex : 0.38')+C('trt_hdl','Traitement de l’HDL bas en cours')+
+  `<div class="bg-amber-50 p-3 rounded-lg border border-amber-200 text-[11px] text-amber-800">Critères : tour de taille ≥ 94 cm (H) / ≥ 80 cm (F) ; PA ≥ 130/85 mmHg ou traitée ; triglycérides ≥ 1,50 g/L ou traités ; HDL bas ou traité ; glycémie ≥ 1,00 g/L ou diabète. La glycémie et le tour de taille proviennent de l’étape 1.</div>`)},
+{t:'Bilan Cardio-Rénal & Lipides',p:'Point 2',ok:'Affiner le diagnostic',s:'Atteintes d’organes cibles : valeurs calculées automatiquement',f:
+ G('Rein',
+  `<div class="grid grid-cols-3 gap-2"><div class="col-span-2">${N('cr','Créatininémie',null,'ex : 11.5')}</div>${L('ucr','Unité',[['mgL','mg/L'],['mgdL','mg/dL'],['umol','µmol/L']])}</div>`+
+  D2(N('alb','Albuminurie (mg/L)',null,'ex : 85'),N('cu','Créatininurie (g/L)',null,'ex : 1.0'))+
+  L('bu','Protéinurie à la bandelette (si RAC impossible)',[['','Non faite'],['0','Négative'],['1','Traces ou +'],['2','++ ou plus']])+
+  N('kal','Kaliémie (mmol/L)')+
+  D2(BOX('d_dfg','DFGe CKD-EPI 2021 (mL/min/1,73 m²)'),BOX('d_rac','RAC (mg/g)'))+
+  `<p id="w_cr" class="text-[11px] text-amber-700"></p>`)+
+ G('Lipides & cardiovasculaire',
+  D2(N('ct','Cholestérol total (g/L)',null,'ex : 2.25'),N('ldl','LDL-c mesuré (g/L, optionnel)','Sinon calcul de Friedewald','ex : 1.45'))+
+  D2(BOX('d_ldl','LDL-c retenu (g/L)'),BOX('d_nhdl','Non-HDL-c (g/L)'))+
+  L('tabac','Tabagisme',[['non','Non-fumeur'],['actif','Actif'],['sevre','Sevré']])+
+  C('dys','Dyslipidémie connue ou traitée')+C('mcva','Maladie cardiovasculaire athéromateuse (infarctus, AVC/AIT, AOMI)')+C('ic','Insuffisance cardiaque')+
+  L('rr','Rétinopathie',[['','Non évaluée'],['0','Absente'],['1','Non proliférante'],['2','Proliférante ou maculopathie']]))+
+ G('Pieds, artères, foie (optionnel)',
+  N('mono','Points non perçus au monofilament 10 g (0 à 6)')+D2(N('pch','PAS cheville, la plus élevée (mmHg)'),N('pbr','PAS bras, la plus élevée (mmHg)'))+
+  C('aomi','AOMI clinique (claudication, pouls abolis)')+C('def','Déformation du pied')+C('ulc','Antécédent d’ulcération chronique ou d’amputation')+
+  D2(N('ast','ASAT (UI/L)'),N('alt','ALAT (UI/L)'))+N('plq','Plaquettes (G/L)')+BOX('d_fib','FIB-4'),null,'md:col-span-2')},
+{t:'Stratification & Cibles',p:'Point 3',ok:'Calculer risque et cibles',s:'Risque cardiovasculaire ESC et objectifs personnalisés',f:
+ G('Contexte du patient',
+  N('dur','Durée du diabète (ans)','Sinon calculée : âge actuel − âge au diagnostic')+
+  C('ev','Espérance de vie supérieure à 5 ans',1)+C('comorb','Comorbidité sévère (cancer évolutif, cirrhose, IRC terminale, démence…)')+
+  L('aut','Autonomie',[['0','Autonome, bon état général'],['1','Fragile'],['2','Dépendant']])+
+  C('hypo','Hypoglycémie sévère dans les antécédents')+C('enc','Grossesse ou projet de grossesse'))},
+{t:'Stratégie Thérapeutique',p:'Points 4 & 5',ok:'Générer le plan sur mesure',s:'Contrôle glycémique actuel, contraintes et plan personnalisé',f:
+ G('Contrôle glycémique actuel',
+  N('hbact','HbA1c actuelle (%)','Si indisponible, utiliser les alternatives ci-dessous')+
+  N('gjm','Glycémie à jeun moyenne, 7 derniers jours (g/L)')+N('gpp','Glycémie postprandiale moyenne (g/L)')+N('gmoy','Glycémie moyenne, profil capillaire ou CGM (g/L)')+N('tir','Temps dans 0,70–1,80 g/L (%)')+
+  C('cata','Catabolisme : amaigrissement, polyurie-polydipsie marquées'))+
+ G('Contexte thérapeutique',
+  C('ci_m','Metformine : intolérance ou contre-indication')+C('ci_s','iSGLT2 : contre-indication (infections génitales ou urinaires récurrentes, risque d’acidocétose, DFG < 20)')+
+  C('ci_g','aGLP-1 : contre-indication ou intolérance (pancréatite, gastroparésie, NEM2)')+C('acc','Accès limité aux molécules récentes (coût, disponibilité)')+
+  `<p class="text-xs font-semibold text-slate-700 pt-2">Traitements déjà en cours</p>`+
+  C('t_metf','Metformine')+C('t_sglt','iSGLT2')+C('t_glp','aGLP-1')+C('t_su','Sulfamide')+C('t_ins','Insuline'))}
+];
+function build(){
+ $('nav').innerHTML=STEPS.map((s,i)=>`<button type="button" onclick="naviguerVers(${i+1})" id="step-nav-${i+1}" class="tab-btn px-3 py-2 whitespace-nowrap ${i?'text-slate-400':'active'}" ${i?'disabled':''}>${i+1}. ${s.t}</button>`).join('<span class="text-slate-300">➔</span>');
+ $('app').innerHTML=STEPS.map((s,i)=>`<section id="step-${i+1}" class="step-content ${i?'':'active'} bg-white rounded-xl shadow-sm p-6"><div class="border-b pb-3 mb-4 flex justify-between items-center"><div><h2 class="text-xl font-bold text-slate-800">Étape ${i+1} : ${s.t}</h2><p class="text-xs text-slate-500">${s.s}</p></div><span class="bg-medical-50 text-medical-700 text-xs px-2.5 py-1 rounded-full font-semibold">${s.p}</span></div><div class="fields grid grid-cols-1 md:grid-cols-2 gap-6">${s.f}</div><div id="res${i+1}" class="mt-6"></div><div class="no-print mt-6 flex justify-between items-center">${i?`<button type="button" onclick="naviguerVers(${i})" class="bg-slate-200 text-slate-700 px-4 py-2 rounded-lg text-sm font-semibold">🖘 Étape précédente</button>`:'<span></span>'}<div class="flex gap-2"><button type="button" onclick="ok${i+1}()" class="bg-medical-600 hover:bg-medical-700 text-white px-5 py-2 rounded-lg font-semibold text-sm shadow">OK – ${s.ok}</button>${i<4?`<button type="button" id="nx${i+1}" onclick="suivant(${i+1})" class="hidden bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2 rounded-lg font-semibold text-sm shadow">Étape suivante ➔</button>`:`<button type="button" onclick="window.print()" class="bg-slate-800 hover:bg-slate-900 text-white px-5 py-2 rounded-lg text-sm font-semibold shadow">🖨 Imprimer le rapport</button>`}</div></div></section>`).join('');
+}
+function naviguerVers(n){document.querySelectorAll('.step-content').forEach(e=>e.classList.remove('active'));document.querySelectorAll('.tab-btn').forEach(e=>e.classList.remove('active'));$('step-'+n).classList.add('active');$('step-nav-'+n).classList.add('active');scrollTo({top:0,behavior:'smooth'})}
+function suivant(n){const b=$('step-nav-'+(n+1));b.disabled=false;b.classList.remove('text-slate-400');naviguerVers(n+1)}
+function toast(m){const t=$('toast');t.textContent=m;t.classList.remove('hidden');setTimeout(()=>t.classList.add('hidden'),6000)}
+/* ---------- rendu des résultats ---------- */
+const COL={ok:'bg-emerald-50 border-emerald-500 text-emerald-900',warn:'bg-amber-50 border-amber-500 text-amber-900',bad:'bg-red-50 border-red-500 text-red-900',info:'bg-sky-50 border-sky-500 text-sky-900',diag:'bg-medical-50 border-medical-600 text-medical-800'};
+const R_=(c,t,w,lab)=>`<div class="rounded-lg border-l-4 p-3 mb-2 text-xs ${COL[c]}"><div class="font-semibold text-[13px]">${t}</div>${w?`<div class="mt-1 text-[11px] opacity-90"><b>${lab||'Pourquoi'} :</b> ${w}</div>`:''}</div>`;
+function show(n,h,next){$('res'+n).innerHTML=`<h3 class="font-bold text-sm text-medical-800 mb-2">Résultat et justification</h3>`+h;const b=$('nx'+n);if(b)b.classList.toggle('hidden',!next);$('res'+n).scrollIntoView({behavior:'smooth',block:'nearest'})}
+/* ---------- calculs live ---------- */
+function imc(){const p=g('poids'),t=g('taille')/100;if(p>0&&t>0){const i=p/(t*t);S.imc=i;$('d_imc').textContent=f1(i);$('d_stat').textContent=i<18.5?'Maigreur':i<25?'Normal':i<30?'Surpoids':i<35?'Obésité classe I':i<40?'Obésité classe II':'Obésité classe III'}else S.imc=null}
+function live3(){
+ const age=g('age'),sx=g('sexe'),cr=g('cr'),u=g('ucr');let dfg=null,rac=null,ldl=null,nh=null,fib=null;
+ if(cr!=null&&age!=null){const m=u==='mgL'?cr/10:u==='umol'?cr/88.4:cr,F=sx==='F',k=F?.7:.9,a=F?-.241:-.302;dfg=142*Math.pow(Math.min(m/k,1),a)*Math.pow(Math.max(m/k,1),-1.2)*Math.pow(.9938,age)*(F?1.012:1)}
+ $('d_dfg').textContent=dfg==null?(cr!=null?'âge requis (étape 1)':'--'):r0(dfg);
+ $('w_cr').textContent=dfg!=null&&(dfg<15||dfg>140)?'Valeur peu plausible : vérifiez l’unité de la créatininémie.':'';
+ const al=g('alb'),cu=g('cu');if(al!=null&&cu>0)rac=al/cu;$('d_rac').textContent=rac==null?'--':r0(rac);
+ const ct=g('ct'),hd=g('hdl'),tg=g('tg');
+ if(g('ldl')!=null)ldl=g('ldl');else if(ct!=null&&hd!=null&&tg!=null&&tg<=3.5)ldl=ct-hd-tg/5;
+ if(ct!=null&&hd!=null)nh=ct-hd;
+ $('d_ldl').textContent=ldl==null?(tg>3.5?'TG > 3,5 : doser le LDL':'--'):f2(ldl);$('d_nhdl').textContent=nh==null?'--':f2(nh);
+ const ast=g('ast'),alt=g('alt'),pl=g('plq');if(ast&&alt&&pl&&age)fib=age*ast/(pl*Math.sqrt(alt));$('d_fib').textContent=fib==null?'--':f2(fib);
+ return{dfg,rac,ldl,nh,fib}}
+function ui(){
+ const d=g('hdispo');$('w_hba1c').style.display=d?'block':'none';$('hlab').textContent=d?'Oui':'Non (diagnostic sur glycémies)';
+ const sec=g('s_pancr')||g('s_endo')||g('s_drug');$('blkB').style.display=sec?'none':'block';
+ $('blk_pc').style.display=g('ab')==='pos'?'none':'block';
+ const ad=g('age_diag');$('blk_mody').style.display=ad==null||ad<=35?'block':'none';$('w_dg').style.display=g('sexe')==='F'?'block':'none';
+ $('recap').textContent=`Déjà saisi : ${g('sexe')==='F'?'femme':'homme'}, ${g('age')??'?'} ans, IMC ${S.imc?f1(S.imc):'?'} kg/m², tour de taille ${g('tour_taille')??'?'} cm, glycémie à jeun ${g('gj')??'?'} g/L.`}
+function refresh(){imc();live3();ui()}
+/* ---------- ÉTAPE 1 : diagnostic ---------- */
+function ok1(){
+ const gj=g('gj'),ga=g('ga'),hg=g('hgpo'),sym=g('sym'),jo=g('jeune'),conf=g('conf'),disp=g('hdispo'),w=[];let hb=disp?g('hba1c'):null;
+ if(hb!=null&&g('interf')){w.push(R_('warn','HbA1c écartée du diagnostic','Une interférence (hémoglobinopathie dont drépanocytose et trait AS, anémie, carence martiale, transfusion, grossesse, IRC terminale) la rend non fiable : seules les glycémies sont retenues.'));hb=null}
+ const gaj=jo?gj:null;let gal=ga;if(!jo&&gj!=null){gal=Math.max(ga||0,gj);w.push(R_('warn','Jeûne non confirmé','La glycémie saisie « à jeun » est traitée comme aléatoire (jeûne ≥ 8 h requis pour le critère à jeun).'))}
+ const tests=[],pos=[];
+ if(gaj!=null){tests.push(1);if(gaj>=1.26)pos.push(`glycémie à jeun ${f2(gaj)} g/L (≥ 1,26)`)}
+ if(hg!=null){tests.push(1);if(hg>=2)pos.push(`HGPO à 2 h ${f2(hg)} g/L (≥ 2,00)`)}
+ if(hb!=null){tests.push(1);if(hb>=6.5)pos.push(`HbA1c ${f1(hb)} % (≥ 6,5)`)}
+ if(!tests.length&&gal==null)return show(1,R_('warn','Aucune valeur saisie','Renseignez au moins une glycémie (à jeun, aléatoire ou HGPO). L’HbA1c est facultative.'),false);
+ let dm='non',h='';
+ if(gal>=2&&sym){dm='oui';h=R_('diag','DIABÈTE SUCRÉ CONFIRMÉ',`Glycémie aléatoire ${f2(gal)} g/L (≥ 2,00) avec symptômes cardinaux : aucune confirmation supplémentaire n’est requise (OMS/ADA).`)}
+ else if(pos.length>=2||(pos.length===1&&conf)){dm='oui';h=R_('diag','DIABÈTE SUCRÉ CONFIRMÉ',pos.length>=2?`Deux critères distincts positifs : ${pos.join(' + ')}.`:`${pos[0]}, anomalie retrouvée sur un test répété.`)}
+ else if(pos.length===1){dm='conf';h=R_('warn','DIABÈTE PROBABLE – À CONFIRMER',`Un seul critère positif (${pos[0]})${tests.length>1?' alors que les autres tests sont normaux : résultats discordants, répéter le test anormal':' : confirmer par un second dosage veineux (glycémie à jeun, HGPO ou HbA1c fiable) à quelques jours d’intervalle'}.`)}
+ else{const pre=(gaj!=null&&gaj>=1&&gaj<1.26)||(hg!=null&&hg>=1.4&&hg<2)||(hb!=null&&hb>=5.7&&hb<6.5);
+  if(pre)h=R_('warn','PRÉDIABÈTE',`Glycémie à jeun 1,00–1,25 g/L (ADA ; seuil OMS 1,10), HGPO 1,40–1,99 g/L ou HbA1c 5,7–6,4 %. Conduite : mesures de mode de vie, perte de poids de 5 à 7 % si surpoids, contrôle glycémique annuel.`);
+  else if(gal>=2)h=R_('warn','GLYCÉMIE ALÉATOIRE ≥ 2,00 g/L SANS SYMPTÔME',`Non diagnostique seule : doser la glycémie à jeun ± HGPO.`);
+  else h=R_('ok','PAS DE CRITÈRE DE DIABÈTE','Valeurs sous les seuils. Dépistage tous les 3 ans après 45 ans ou plus tôt si IMC ≥ 25 avec facteur de risque.')}
+ S.dm=dm;S.maxg=Math.max(gj||0,ga||0,hg||0);
+ if(!disp||hb==null)w.push(R_('info','Diagnostic sans HbA1c',`Glycémies et HGPO sont des critères valides ; le suivi pourra s’appuyer sur les glycémies (étape 5).`));
+ if(S.maxg>=2.5)w.push(R_(S.maxg>=3&&sym?'bad':'warn','Hyperglycémie marquée',`Glycémie ≥ 2,50 g/L : rechercher une cétose (bandelette urinaire) avant toute décision${S.maxg>=3&&sym?' ; avec symptômes et ≥ 3,00 g/L, une insulinothérapie d’emblée est à envisager (étape 5)':''}.`));
+ const i=S.imc,tt=g('tour_taille'),sx=g('sexe');
+ if(i!=null||tt!=null)w.push(R_('info',`Anthropométrie : IMC ${i?f1(i):'?'} kg/m²${tt!=null?`, tour de taille ${tt} cm`:''}`,i>=25||(tt!=null&&tt>=(sx==='F'?80:94))?'Excès pondéral ou adiposité abdominale : facteur de risque métabolique, pris en compte à l’étape 2 (syndrome métabolique) et pour le plan thérapeutique.':'Pas d’excès pondéral : oriente moins vers un DT2 d’origine métabolique (voir typage).'));
+ show(1,h+w.join(''),dm!=='non')}
+/* ---------- ÉTAPE 2 : typage + syndrome métabolique ---------- */
+function typer(){
+ const sec=g('s_pancr')||g('s_endo')||g('s_drug'),ab=g('ab'),mode=g('mode'),ce=g('cetose'),imc=S.imc,age=g('age'),adx=g('age_diag')??age,pc=g('pc'),am=g('amai'),why=[],ex=[];
+ if(sec){const c=[g('s_pancr')&&'pancréatopathie (type 3c)',g('s_endo')&&'endocrinopathie',g('s_drug')&&'médicament diabétogène'].filter(Boolean).join(', ');
+  return{code:'SEC',label:'Diabète secondaire',why:[`Cause identifiable : ${c}.`,'Un diabète secondaire prime sur le typage auto-immun ou métabolique.'],ex:['Traiter ou retirer la cause quand c’est possible','Insuline souvent nécessaire']}}
+ let sc=0;if(adx!=null&&adx<35)sc++;if(imc&&imc<25)sc++;if(mode==='brutal')sc++;if(am)sc++;if(ce==='presence')sc+=2;if(g('autoimm'))sc++;
+ const sg=`score d’évocation DT1 : ${sc}/7`;
+ if(ab==='pos'){const lada=age>30&&mode!=='brutal'&&ce!=='presence'&&!am;
+  return lada?{code:'LADA',label:'LADA (diabète auto-immun de l’adulte)',why:['Auto-anticorps positifs chez un adulte > 30 ans, installation non brutale, sans cétose ni amaigrissement.'],ex:['Peptide C pour apprécier la réserve insulinosécrétoire','Éviter les sulfamides']}
+   :{code:'DT1',label:'Diabète de type 1',why:['Auto-anticorps positifs avec profil d’installation évocateur : destruction auto-immune des cellules bêta.'],ex:['Dépistage thyroïdite et maladie cœliaque','Cétonémie à connaître']}}
+ if(g('fam3')&&adx!=null&&adx<=35&&(!imc||imc<30))return{code:'MODY',label:'MODY suspecté (diabète monogénique)',why:['Transmission sur 3 générations, diagnostic avant 35 ans, sans obésité, anticorps non positifs.'],ex:['Séquençage ciblé : GCK, HNF1A, HNF4A, HNF1B','Peptide C conservé attendu']}
+ if(pc==='bas'&&ab!=='pos')return{code:'DT1',label:'Diabète insulinopénique (DT1 probable)',why:['Peptide C effondré : carence profonde en insuline, indépendamment des anticorps.',sg],ex:['Dosage des anticorps si accessible','Insulinothérapie vitale']}
+ if(ab==='neg'){const flat=ce==='presence'&&imc>=25;
+  return{code:'DT2',label:'Diabète de type 2'+(flat?' à tendance cétosique (type Flatbush)':''),why:['Auto-anticorps négatifs.',flat?'Cétose inaugurale avec surpoids : profil Flatbush, fréquent en Afrique ; insuline initiale puis sevrage souvent possible.':sg+'.'],ex:[]}}
+ if(sc>=3)return{code:'DT1',label:'Diabète de type 1 probable',why:[`${sg} : jeune âge, minceur, début brutal ou cétose évoquent une carence insulinique.`],ex:['Doser les anticorps (anti-GAD en premier, puis IA2, ZnT8) et le peptide C','Insuline sans attendre en cas de cétose']}
+ return{code:'DT2',label:'Diabète de type 2',why:[`${sg} : profil métabolique (âge, adiposité, installation insidieuse${g('fam_dt2')?', antécédent familial':''}).`],ex:['Anticorps seulement si doute (jeune, mince, début brutal)']}}
+function synd(){
+ const sx=g('sexe'),wc=g('tour_taille'),pas=g('pas'),pad=g('pad'),tg=g('tg'),hd=g('hdl'),gj=g('gj');
+ const K=[['Tour de taille',wc==null?null:wc>=(sx==='F'?80:94),wc==null?'non renseigné':`${wc} cm (seuil ${sx==='F'?'≥ 80':'≥ 94'})`],
+ ['Pression artérielle',(pas==null&&pad==null&&!g('trt_hta'))?null:(g('trt_hta')||pas>=130||pad>=85),g('trt_hta')?'traitée':pas==null?'non renseignée':`${pas}/${pad??'?'} mmHg (seuil ≥ 130/85)`],
+ ['Triglycérides',(tg==null&&!g('trt_tg'))?null:(g('trt_tg')||tg>=1.5),g('trt_tg')?'traités':tg==null?'non renseignés':`${f2(tg)} g/L (seuil ≥ 1,50)`],
+ ['HDL-cholestérol',(hd==null&&!g('trt_hdl'))?null:(g('trt_hdl')||hd<(sx==='F'?.5:.4)),g('trt_hdl')?'traité':hd==null?'non renseigné':`${f2(hd)} g/L (seuil < ${sx==='F'?'0,50':'0,40'})`],
+ ['Glycémie',(S.dm==='oui'||S.dm==='conf')?true:(gj==null?null:gj>=1),(S.dm==='oui'||S.dm==='conf')?'diabète':`${gj??'?'} g/L (seuil ≥ 1,00)`]];
+ const n=K.filter(k=>k[1]===true).length,u=K.filter(k=>k[1]===null).length;return{K,n,u,sm:n>=3,inc:n<3&&n+u>=3}}
+function ok2(){
+ const T=typer(),M=synd();S.typ=T;S.sm=M;
+ let h=R_('diag',T.label,T.why.join(' '));
+ if(T.ex.length)h+=R_('info','Examens et conduite complémentaires',T.ex.join(' ; ')+'.');
+ const rows=M.K.map(k=>`<tr><td class="pr-3 py-0.5">${k[0]}</td><td class="pr-3">${k[1]===null?'—':k[1]?'✔ critère présent':'✘ absent'}</td><td class="text-slate-600">${k[2]}</td></tr>`).join('');
+ h+=`<div class="rounded-lg border-l-4 p-3 mb-2 text-xs ${M.sm?COL.warn:M.inc?COL.info:COL.ok}"><div class="font-semibold text-[13px]">Syndrome métabolique : ${M.sm?'PRÉSENT':M.inc?'INCOMPLET (critères manquants)':'ABSENT'} (${M.n}/5 critères)</div><table class="mt-1 text-[11px]">${rows}</table><div class="mt-1 text-[11px]"><b>Pourquoi :</b> définition NCEP-ATP III / harmonisée : au moins 3 critères sur 5${M.sm?' : le risque cardiovasculaire et la stéatose hépatique sont à rechercher, et la perte de poids devient prioritaire.':'.'}</div></div>`;
+ show(2,h,true)}
+/* ---------- ÉTAPE 3 : bilan cardio-rénal ---------- */
+function ok3(){
+ const v=live3(),h=[];const{dfg,rac,ldl}=v,age=g('age'),pas=g('pas'),pad=g('pad');
+ const mrc=(dfg!=null&&dfg<60)||(rac!=null&&rac>=30);
+ const mo=g('mono'),neuro=mo!=null&&mo>=1;let aomi=g('aomi');const pch=g('pch'),pbr=g('pbr');
+ let racEst=null;const bu=g('bu');if(rac==null&&bu){racEst=bu==='2'?301:bu==='1'?30:0}
+ const rc=rac??racEst;
+ S.bil={dfg,rac:rc,ldl,nh:v.nh,mrc:mrc||(racEst!=null&&racEst>=30),neuro,rr:g('rr'),fib:v.fib,tab:g('tabac'),mcva:g('mcva'),ic:g('ic'),dys:g('dys')};
+ if(dfg!=null||rc!=null){const gs=dfg==null?'':dfg>=90?'G1':dfg>=60?'G2':dfg>=45?'G3a':dfg>=30?'G3b':dfg>=15?'G4':'G5',as=rc==null?'':rc<30?'A1':rc<=300?'A2':'A3';
+  const c=S.bil.mrc;h.push(R_(c?'warn':'ok',c?`Maladie rénale chronique ${gs} ${as}`:`Pas de maladie rénale chronique (${gs} ${as})`,`DFGe ${dfg!=null?r0(dfg)+' mL/min/1,73 m² (CKD-EPI 2021)':'non calculé'}${rc!=null?`, RAC ${racEst!=null?'estimée à la bandelette ('+(racEst>=301?'> 300':racEst>=30?'≥ 30':'négative')+')':r0(rc)+' mg/g'}`:''}. ${c?'À confirmer sur > 3 mois (albuminurie sur 2 prélèvements sur 3) ; une albuminurie avec rétinopathie oriente vers une néphropathie diabétique. Contrôle au moins annuel.':'Dépistage annuel DFGe + RAC.'}`))}
+ else h.push(R_('info','Fonction rénale non évaluée','Renseignez créatinine (DFGe) et albuminurie/créatininurie, ou à défaut la bandelette urinaire.'));
+ const tg=g('tg'),hd=g('hdl');
+ if(ldl!=null||tg!=null){const ath=tg>=1.5&&hd!=null&&hd<(g('sexe')==='F'?.5:.4);h.push(R_(ath?'warn':'info',ath?'Dyslipidémie athérogène du diabétique':`LDL-c retenu : ${ldl!=null?f2(ldl)+' g/L':'non calculable'}`,ath?`Triglycérides ${f2(tg)} g/L ≥ 1,50 avec HDL-c ${f2(hd)} g/L bas${ldl!=null?` ; LDL-c ${f2(ldl)} g/L, non-HDL-c ${f2(v.nh)} g/L`:''} : profil typique de l’insulinorésistance, à confronter à la cible LDL de l’étape 4.`:`Calcul de Friedewald (CT − HDL − TG/5) si le LDL n’est pas mesuré ; la cible dépend du risque (étape 4).`))}
+ if(pas!=null||pad!=null){const hi=pas>=130||pad>=80,hta=pas>=140||pad>=90;h.push(R_(hta?'bad':hi?'warn':'ok',hta?'PA ≥ 140/90 : HTA probable':hi?'PA au-dessus de la cible diabétique (< 130/80)':'PA dans la cible',hta?'Confirmer par mesures répétées ou automesure ; en cas de RAC ≥ 30 mg/g, IEC ou ARA2 en première intention.':'Cible < 130/80 mmHg sans descendre sous 120 de systolique (ADA/ESC).'))}
+ if(pch&&pbr){const ips=pch/pbr;if(ips<.9)aomi=true;h.push(R_(ips<.9?'bad':ips>1.4?'warn':'ok',`IPS = ${f2(ips)}`,ips<.9?'IPS < 0,9 : AOMI, bilan vasculaire et statine haute intensité.':ips>1.4?'Artères incompressibles (médiacalcose) : IPS non fiable, indice de pression au gros orteil ou écho-Doppler.':'Valeur normale (0,9–1,4).'))}
+ const dfm=g('def'),pg=g('ulc')?3:((neuro&&aomi)||(neuro&&dfm)||(aomi&&dfm))?2:(neuro||aomi)?1:0,pf=[neuro&&'perte de sensibilité',aomi&&'AOMI',dfm&&'déformation',g('ulc')&&'antécédent d’ulcère ou d’amputation'].filter(Boolean);S.bil.pg=pg;S.bil.aomi=aomi;
+ if(mo!=null||aomi||g('def')||g('ulc')){h.push(R_(pg>=2?'bad':pg===1?'warn':'ok',`Risque podologique IWGDF ${pg}${pf.length?' ('+pf.join(', ')+')':''}`,['Catégorie 0 (très faible) : examen annuel des pieds.','Catégorie 1 (faible) : examen tous les 6 à 12 mois, éducation, chaussage adapté.','Catégorie 2 (modéré) : examen tous les 3 à 6 mois, soins de podologie, chaussage thérapeutique si déformation.','Catégorie 3 (élevé) : examen tous les 1 à 3 mois, équipe spécialisée (IWGDF 2023).'][pg]))}
+ const rr=g('rr');if(rr!=null&&rr!=='')h.push(R_(rr==='2'?'bad':rr==='1'?'warn':'ok',['Pas de rétinopathie','Rétinopathie non proliférante','Rétinopathie proliférante ou maculopathie'][+rr],['Contrôle annuel (tous les 2 ans si équilibre stable).','Ophtalmologue, contrôle annuel ou plus ; équilibrer glycémie et PA.','Avis ophtalmologique urgent ; éviter une baisse très rapide de l’HbA1c.'][+rr]));
+ if(v.fib!=null){const lo=age>=65?2:1.3;h.push(R_(v.fib<lo?'ok':v.fib>2.67?'bad':'warn',`FIB-4 = ${f2(v.fib)}`,v.fib<lo?'Faible risque de fibrose avancée.':v.fib>2.67?'Risque élevé : hépatologie.':'Zone intermédiaire : élastographie (FibroScan).'))}
+ if(!h.length)h.push(R_('warn','Rien à analyser','Saisissez au moins une donnée du bilan.'));
+ const org=[S.bil.mrc&&'rein',neuro&&'nerfs périphériques',(rr==='1'||rr==='2')&&'rétine',(aomi||g('mcva'))&&'artères',g('ic')&&'cœur'].filter(Boolean);
+ h.push(R_(org.length?'diag':'ok','Atteintes d’organes cibles : '+(org.length?org.join(', '):'aucune retrouvée'),org.length?'Chaque atteinte relève le niveau de risque cardiovasculaire (étape 4) et oriente le traitement cardio-rénal (étape 5).':'Le diabète seul n’entraîne pas de risque très élevé si la durée est courte et sans autre facteur.'));
+ show(3,h.join(''),true)}
+/* ---------- ÉTAPE 4 : risque et cibles ---------- */
+function ok4(){
+ if(!S.bil||!S.typ)return toast('Validez d’abord les étapes précédentes.');
+ const b=S.bil,t=S.typ.code,age=g('age'),adx=g('age_diag')??age,dur=g('dur')??(age!=null&&adx!=null?age-adx:null),pas=g('pas'),au=g('aut'),h=[];
+ const fr=[g('trt_hta')||pas>=140,b.dys||(b.ldl!=null&&b.ldl>=1.6)||(g('tg')>=1.5&&g('hdl')!=null&&g('hdl')<(g('sexe')==='F'?.5:.4)),b.tab==='actif',S.imc>=30,b.rac>=30].filter(Boolean).length;
+ const frl=[(g('trt_hta')||pas>=140)&&'HTA',(b.dys||(b.ldl!=null&&b.ldl>=1.6)||(g('tg')>=1.5&&g('hdl')!=null&&g('hdl')<(g('sexe')==='F'?.5:.4)))&&'dyslipidémie',b.tab==='actif'&&'tabagisme',S.imc>=30&&'obésité',b.rac>=30&&'albuminurie'].filter(Boolean);
+ const mv=[b.rac>=30||(b.dfg!=null&&b.dfg<60),b.neuro,b.rr==='1'||b.rr==='2'].filter(Boolean).length;const tod=b.rac>300||(b.dfg!=null&&b.dfg<45)||(b.dfg!=null&&b.dfg<60&&b.rac>=30)||mv>=3;
+ let rk,cb,jr=[];
+ if(b.mcva||b.ic||tod||fr>=3||(t==='DT1'&&dur>20)){rk='TRÈS ÉLEVÉ';cb=.55;if(b.mcva)jr.push('maladie cardiovasculaire avérée');if(b.ic)jr.push('insuffisance cardiaque');if(tod)jr.push('atteinte sévère d’organe cible (DFG < 45 ; DFG 45–59 avec RAC ≥ 30 ; RAC > 300 ; ou atteinte microvasculaire sur 3 sites : rein, rétine, nerfs)');if(fr>=3)jr.push(fr+' facteurs de risque majeurs ('+frl.join(', ')+')');if(t==='DT1'&&dur>20)jr.push('DT1 de plus de 20 ans')}
+ else if((t==='DT1'?age>=35:(age==null||age>=50))||dur>=10||fr>=1){rk='ÉLEVÉ';cb=.7;jr.push(dur>=10?'durée du diabète ≥ 10 ans':fr?frl.join(', '):'âge supérieur au seuil de risque modéré')}
+ else{rk='MODÉRÉ';cb=1;jr.push('diabète récent, sujet jeune, sans autre facteur de risque')}
+ S.rk=rk;S.cb=cb;S.fr=fr;
+ h.push(R_(rk==='MODÉRÉ'?'ok':rk==='ÉLEVÉ'?'warn':'bad','Risque cardiovasculaire '+rk,'Classification ESC 2023 : '+jr.join(' ; ')+'.'+((fr>=3||(t==='DT1'&&dur>20))&&!b.mcva&&!b.ic&&!tod?' Les critères « ≥ 3 facteurs majeurs » et « DT1 > 20 ans » viennent de l’ESC 2019 et sont conservés par prudence.':'')));
+ let c,tx,why;
+ if(g('enc')){c=6.5;tx='≤ 6,5 % (< 6 % si sans hypoglycémie)';why='Grossesse ou projet : contrôle strict pour limiter les malformations et la macrosomie.'}
+ else if(t==='DT1'||t==='LADA'){const lax=au!=='0'||g('hypo');c=lax?8:7;tx=lax?'≤ 8 %':'< 7 %';why=lax?'Fragilité ou hypoglycémie sévère passée : éviter les hypoglycémies prime sur la cible stricte.':'Adulte DT1 : cible ADA < 7 % avec temps dans la cible > 70 %.'}
+ else if(au==='2'||g('comorb')||!g('ev')||(b.dfg!=null&&b.dfg<30)){c=8;tx='≤ 8 %';why='Espérance de vie courte, comorbidité sévère, dépendance ou IRC sévère : bénéfice d’un contrôle strict improbable.'}
+ else if(age>=75||au==='1'){c=au==='1'?8:7;tx=c===8?'≤ 8 %':'≤ 7 %';why=c===8?'Sujet fragile : cible assouplie (SFD/ADA), sans descendre sous 7 % sous sulfamide, glinide ou insuline.':'Sujet âgé en bonne santé : ≤ 7 %.'}
+ else if(g('hypo')||dur>10){c=8;tx='≤ 8 %';why='Hypoglycémie sévère passée ou diabète ancien : risque d’hypoglycémie d’un contrôle strict.'}
+ else{c=7;tx='≤ 7 % (6,5 % envisageable)';why='Norme ; 6,5 % envisageable si diabète récent, longue espérance de vie et atteinte sans hypoglycémie (SFD 2025).'}
+ S.cib=c;const fm=c>=8?1.5:1.3;S.fm=fm;
+ h.push(R_('diag','Cible d’HbA1c : '+tx,why));
+ h.push(R_('info',`Équivalent sans HbA1c : glycémie moyenne ≈ ${f2((28.7*c-46.7)/100)} g/L ; à jeun 0,80–${f2(fm)} g/L ; postprandiale < 1,80 g/L ; temps dans la cible > ${au!=='0'||age>=75?50:70} %`,'Quand l’HbA1c est indisponible ou non fiable, ces cibles glycémiques la remplacent (formule ADAG pour la glycémie moyenne).'));
+ const nh=cb+.3,ld=b.ldl;
+ h.push(R_(ld==null?'info':ld<=cb?'ok':'warn',`LDL-c < ${f2(cb)} g/L${rk!=='MODÉRÉ'?' et baisse ≥ 50 %':''} ; non-HDL-c < ${f2(nh)} g/L`,ld==null?'LDL-c non renseigné : à doser.':ld<=cb?`LDL-c actuel ${f2(ld)} g/L : cible atteinte.`:`LDL-c actuel ${f2(ld)} g/L : au-dessus de la cible, ${r0((1-cb/ld)*100)} % de baisse nécessaire.`));
+ const lax=au!=='0';
+ h.push(R_(pas==null?'info':(pas<(lax?140:130)&&g('pad')<(lax?90:80))?'ok':'warn',lax?'PA < 140/90 mmHg (sujet fragile)':'PA < 130/80 mmHg, sans descendre sous 120 de systolique',pas==null?'PA non renseignée.':`PA actuelle ${pas}/${g('pad')??'?'} mmHg : ${(pas<(lax?140:130)&&g('pad')<(lax?90:80))?'dans la cible.':'au-dessus de la cible.'}`));
+ S.dur=dur;show(4,h.join(''),true)}
+/* ---------- ÉTAPE 5 : plan thérapeutique ---------- */
+function ctrl(){
+ const cib=S.cib,hb=g('hbact'),gm=g('gmoy'),gj=g('gjm'),gp=g('gpp'),tir=g('tir'),fr=g('aut')!=='0'||g('age')>=75,d=[],o=[];
+ const eh=gm!=null?(gm*100+46.7)/28.7:null;
+ if(gj!=null){const k=gj<=S.fm;o.push(k);d.push(`glycémie à jeun ${f2(gj)} g/L ${k?'dans':'au-dessus de'} la cible (0,80–${f2(S.fm)})`)}
+ if(gp!=null){const k=gp<1.8;o.push(k);d.push(`postprandiale ${f2(gp)} g/L ${k?'dans':'au-dessus de'} la cible (< 1,80)`)}
+ if(tir!=null){const m=fr?50:70,k=tir>=m;o.push(k);d.push(`temps dans la cible ${tir} % (objectif > ${m} %)`)}
+ let main=null;if(hb!=null)main={v:hb,src:'HbA1c',ok:hb<=cib};else if(eh!=null)main={v:eh,src:'HbA1c estimée à partir de la glycémie moyenne (ADAG)',ok:eh<=cib,est:1};
+ return{hb,eh,main,d,gl:o.length?o.every(Boolean):null,sev:(hb!=null&&hb>=10)||(eh!=null&&eh>=10)}}
+const NC={metf:"Glucophage, Metformine Biogaran, Metformin-Denk, Diaformine, Metformin Vir",su:"gliclazide : Glide, Sergliron ; glimépiride : Irys, Glimiwel, Glimépiride-Denk ; glibenclamide : Daonil",basal:"NPH : Insulatard ; analogues lents : †Lantus, †Toujeo, †Levemir, †Tresiba",rapide:"humaine : Actrapid, Humodar R ; analogues : †NovoRapid, †Humalog, †Apidra",sglt:"†Forxiga (dapagliflozine), †Jardiance (empagliflozine)",glp:"†Ozempic (sémaglutide), †Victoza (liraglutide), †Trulicity (dulaglutide), †Mounjaro (tirzépatide)",dpp4:"Galvus, Vilda-Denk (vildagliptine) ; Gvia (sitagliptine) ; †Trajenta (linagliptine)"};
+const nc=k=>' <span class="block text-xs text-slate-600 mt-1">Spécialités : '+NC[k]+(NC[k].includes('†')?' <i>(† non listé dans votre liste)</i>':'')+'</span>';
+function ok5(){
+ if(!S.cib||!S.bil)return toast('Validez d’abord les étapes précédentes (jusqu’à l’étape 4).');
+ const b=S.bil,t=S.typ.code,P=g('poids'),age=g('age'),dfg=b.dfg,rac=b.rac,k=g('kal'),imc=S.imc,cib=S.cib,old=age>=75||g('aut')!=='0',K=ctrl(),h=[];
+ const en=x=>g(x)?' <i>(déjà en cours)</i>':'';
+ let mh=`Perte de poids de 5 à 10 %${P?` (${r0(P*.05)} à ${r0(P*.1)} kg, cible ${r0(P*.9)}–${r0(P*.95)} kg)`:''} si IMC ≥ 25 ; ≥ 150 min/semaine d’activité aérobie modérée + renforcement 2–3 fois ; alimentation méditerranéenne, fibres ≥ 30 g/j, sel < 5 g/j${b.tab==='actif'?' ; <b>sevrage tabagique prioritaire</b>':''}${S.sm&&S.sm.sm?' ; syndrome métabolique : la perte de poids est le traitement de fond':''}.`;
+ if(t==='DT2'&&S.dur!=null&&S.dur<6&&imc>=27&&P)mh+=` Diabète récent : une perte de 10–15 % (${r0(P*.1)} à ${r0(P*.15)} kg) peut induire une rémission.`;
+ const R2=(c,t2,w)=>h.push(R_(c,t2,w,'Conduite'));
+ R2('ok','1. Mesures hygiéno-diététiques et éducation thérapeutique',mh+' <b>Pourquoi :</b> fondement de la prise en charge, à poursuivre quel que soit le médicament ; éducation : règle des 15 g de glucides en cas d’hypoglycémie, auto-inspection des pieds.');
+ if(t==='DT1'||t==='LADA'){
+  R2('diag',(t==='DT1'?'2. Insulinothérapie vitale exclusive':'2. Insulinothérapie précoce (LADA)')+en('t_ins'),`Schéma basal-bolus${P?` : dose initiale indicative ${r0(P*.4)}–${r0(P*.6)} U/j (0,4–0,6 U/kg/j), basale 40–50 % (${r0(P*.4*.4)}–${r0(P*.6*.5)} U), le reste en bolus aux repas`:' (0,4–0,6 U/kg/j, basale 40–50 %)'}. Boucle fermée et CGM à proposer dès que disponibles. <b>Pourquoi :</b> carence insulinique absolue ou évolutive ; les antidiabétiques oraux ne la compensent pas.${t==='LADA'?' Éviter les sulfamides.':''}${nc('basal')}${nc('rapide')}`);
+  R2('warn','Sécurité','Glucagon à domicile, cétonémie et règles des jours de maladie, éducation structurée, dépistage thyroïde et maladie cœliaque.')}
+ else if(t==='MODY')R2('diag','2. Traitement guidé par le gène (séquençage avant tout changement)','GCK : aucun traitement ; HNF1A / HNF4A : sulfamide à faible dose, très efficace ; HNF1B : insuline et bilan rénal. <b>Pourquoi :</b> le mécanisme génétique détermine la réponse thérapeutique.');
+ else if(t==='SEC')R2('diag','2. Traiter la cause du diabète secondaire','Arrêt ou réduction de la molécule en cause, traitement de l’endocrinopathie ; insuline souvent nécessaire ; en cas de pancréatopathie, éviter les sulfamides (hypoglycémies).');
+ else{
+  const cat=g('cata')||K.sev||S.maxg>=3||g('cetose')==='presence';
+  if(cat)R2('bad','2a. Insuline basale d’emblée'+en('t_ins'),`0,1–0,2 U/kg/j${P?` (≈ ${r0(P*.1)}–${r0(P*.2)} U/j)`:''}, titration sur glycémies à jeun ; avis diabétologue souhaitable. <b>Pourquoi :</b> catabolisme, cétose, HbA1c ≥ 10 % ou glycémie ≥ 3 g/L : la glucotoxicité doit être levée ; un sevrage est possible ensuite.${nc('basal')}`);
+  if(!cat&&g('proto_hop'))R2('diag','2a. Insuline basale d’emblée (protocole du service)'+en('t_ins'),`Metformine + insuline lente : 10 U/j ou 0,1–0,2 U/kg/j${P?` (≈ ${r0(P*.1)}–${r0(P*.2)} U/j)`:''}, le soir (NPH au coucher) ou à heure fixe (analogue lent) ; +2 U tous les 3 jours jusqu’à une glycémie à jeun de 0,8–1,3 g/L ; −10 à 20 % en cas d’hypoglycémie ; réduire ou arrêter le sulfamide à l’introduction. <b>À noter :</b> schéma de service ; ADA/EASD et SFD ne l’imposent pas à tous (metformine seule ou associée à un iSGLT2/aGLP-1 d’abord si HbA1c < 10 % sans symptômes). Risque d’hypoglycémie et de prise de poids : réévaluer la nécessité à chaque contrôle.${nc('basal')}`);
+  if(g('ci_m')||(dfg!=null&&dfg<30))R2('warn','Metformine non utilisable','Intolérance, contre-indication ou DFG < 30 mL/min.');
+  else{const mx=dfg==null?null:dfg>=60?3000:dfg>=45?2000:1000;R2('ok','2b. Metformine en première ligne'+en('t_metf'),`Débuter 500 mg/j au repas, +500 mg par semaine. ${mx?`<b>Dose maximale selon le DFG (${r0(dfg)}) : ${mx} mg/j.</b>`:'Renseigner le DFG pour fixer la dose maximale (45–59 : 2000 mg/j ; 30–44 : 1000 mg/j).'} <b>Pourquoi :</b> efficacité, sécurité, faible coût, absence d’hypoglycémie ; surveiller la vitamine B12 au long cours.${nc('metf')}`)}
+  const sg=!g('ci_s'),gl=!g('ci_g'),ob=imc>=30;let ind=false;
+  if(b.ic){ind=true;R2('diag','2c. iSGLT2 (dapagliflozine ou empagliflozine 10 mg)'+en('t_sglt'),sg?'<b>Pourquoi :</b> insuffisance cardiaque : réduction des hospitalisations, indiqué quelle que soit l’HbA1c.'+nc('sglt'):'iSGLT2 contre-indiqué : avis cardiologique ; aGLP-1 à discuter si obésité (IC à fraction préservée).')}
+  if(b.mrc){ind=true;R2('diag','2d. Protection rénale'+en('t_sglt'),sg?'<b>iSGLT2</b> (initiation jusqu’à DFG 20–25) avec <b>IEC/ARA2</b> à dose maximale tolérée. <b>Pourquoi :</b> ralentit la progression de la MRC (SFD : bithérapie metformine + iSGLT2 d’emblée).'+nc('sglt'):`iSGLT2 contre-indiqué : ${gl?'aGLP-1 (sémaglutide) pour le bénéfice rénal.':'avis néphrologique.'}`);
+   if(rac>=30&&(k==null||k<=5)&&(dfg==null||dfg>=25))R2('info','Finérénone (ADA 2026)',`À ajouter si albuminurie persistante sous IEC/ARA2 maximal, DFG ≥ 25 et kaliémie ≤ 5,0 mmol/L${k==null?' (kaliémie à renseigner)':''}.`)}
+  if(g('mcva')){ind=true;R2('diag','2e. aGLP-1 ou iSGLT2 à bénéfice cardiovasculaire démontré'+en('t_glp'),'<b>Pourquoi :</b> maladie cardiovasculaire avérée : ESC/ADA recommandent ces classes indépendamment de l’HbA1c ; la SFD réserve l’aGLP-1 aux patients au-dessus de leur cible.'+nc('glp'))}
+  if(ob&&!b.ic&&!b.mrc&&!g('mcva')){ind=true;R2('diag',gl?'2f. aGLP-1 à forte efficacité (sémaglutide) ou tirzépatide'+en('t_glp'):'2f. iSGLT2'+en('t_sglt'),gl?`<b>Pourquoi :</b> obésité (IMC ${f1(imc)}) : perte de poids importante (SFD : bithérapie metformine + aGLP-1). Titration lente ; nausées, lithiase biliaire, perte musculaire.${nc('glp')}`:'<b>Pourquoi :</b> obésité avec aGLP-1 impossible : perte de poids modérée par iSGLT2.')}
+  const nat=K.main?!K.main.ok:K.gl===false;
+  if(!ind&&nat)R2('diag','2g. Choix selon le profil',old?'<b>Sujet âgé ou fragile :</b> metformine + iDPP4 (dose adaptée au DFG, hors linagliptine). <b>Éviter sulfamides, glinides, aGLP-1</b> (hypoglycémies, perte de poids).'+nc('dpp4'):'<b>Sans risque d’hypoglycémie :</b> iDPP4, iSGLT2 ou aGLP-1 ; <b>perte de poids prioritaire :</b> aGLP-1 ou iSGLT2. Ne pas associer iDPP4 et aGLP-1.'+nc('dpp4'));
+  if(g('acc')&&!old)R2('warn','Accès limité aux molécules récentes','Metformine + gliclazide LM 30–60 mg (éducation à l’hypoglycémie, éviter si DFG < 30)'+en('t_su')+' ; pioglitazone 15–30 mg en alternative peu coûteuse (contre-indiquée si insuffisance cardiaque, œdèmes ou fracture)'+', puis insuline basale (NPH ou analogue lent) si la cible n’est pas atteinte.'+nc('su'));
+  const m=K.main;
+  if(m){const e=m.v-cib;R2(e<=0?'ok':'info','Contrôle : '+m.src+' '+f1(m.v)+' %',e<=0?`Cible atteinte (≤ ${f1(cib)} %) : pas d’intensification, contrôle à 3–6 mois${old?', déprescription si risque d’hypoglycémie':''}.`:`Écart de +${f1(e)} point à la cible. Réévaluer à 3 mois ; si la cible n’est pas atteinte, ajouter une classe. Si un injectable est nécessaire, <b>aGLP-1 avant l’insuline</b> ; insuline basale si HbA1c ≥ 10 % ou glycémie ≥ 3 g/L, ou échec.${m.est?' Estimation à ± 0,5–1 point : à confirmer par HbA1c si disponible.':''}`);
+   if(K.d.length)R2('info','Glycémies de suivi',K.d.join(' ; ')+'.')}
+  else if(K.gl!=null)R2(K.gl?'ok':'info','Contrôle évalué sans HbA1c',K.d.join(' ; ')+(K.gl?' : cibles atteintes, maintenir et contrôler à 3 mois.':' : cibles non atteintes, intensifier selon le plan ci-dessus.'));
+  else R2('info','Contrôle glycémique non évalué','Renseignez l’HbA1c ou, à défaut, glycémie à jeun moyenne, postprandiale, glycémie moyenne ou temps dans la cible.')}
+ const cv=[];
+ if(t!=='DT1'||S.rk){cv.push(`<b>Statine</b> (${S.rk==='TRÈS ÉLEVÉ'?'haute intensité : atorvastatine 40–80 mg ou rosuvastatine 20 mg':'intensité adaptée'}) ; cible LDL-c < ${f2(S.cb)} g/L${b.ldl!=null?`, actuel ${f2(b.ldl)} g/L`:''}${b.ldl!=null&&b.ldl>S.cb*1.5?' ; ézétimibe probablement nécessaire':''}.`)}
+ if(rac>=30||g('pas')>=130||g('trt_hta'))cv.push('<b>IEC ou ARA2</b> (périndopril, losartan) : néphroprotection et PA < 130/80 mmHg.');
+ if(g('mcva'))cv.push('<b>Aspirine 75–100 mg/j</b> en prévention secondaire (clopidogrel si intolérance) ; en prévention primaire, non systématique.');
+ R2('info','3. Traitement cardiovasculaire et néphroprotecteur',cv.join(' ')||'Aucun traitement associé indiqué sur les données saisies.');
+ R2('warn','4. Surveillance et vigilance',`HbA1c tous les 3 mois (ou glycémies de suivi si indisponible) ; DFGe + RAC annuels ; fond d’œil selon la rétinopathie ; examen des pieds selon la catégorie IWGDF (annuel si 0, tous les 6–12 mois si 1, 3–6 mois si 2, 1–3 mois si 3) ; FIB-4 annuel. iSGLT2 : arrêt 3 jours avant chirurgie et en maladie aiguë (acidocétose euglycémique : <a href="#" onclick="ouvrirModule(\'urgences\',\'u-eug\');return false" class="underline font-semibold">voir Urgences</a>) ; metformine : arrêt si déshydratation, produit de contraste iodé ou DFG < 30 ; réduire sulfamide ou insuline à l’introduction d’un iSGLT2 ou aGLP-1.`);
+ R2('info','5. Pour aller plus loin','Familles et spécialités : <a href="#" onclick="ouvrirModule(\'medicaments\');return false" class="underline font-semibold">module Médicaments</a>. Complications aiguës (hypoglycémie, acidocétose, SHH) : <a href="#" onclick="ouvrirModule(\'urgences\');return false" class="underline font-semibold">module Urgences</a>. Dépistage et prise en charge des complications chroniques, avec le suivi personnalisé de ce patient : <a href="#" onclick="ouvrirModule(\'chroniques\');return false" class="underline font-semibold">module Complications chroniques</a>.');
+ show(5,h.join(''),false)}
+/* ---------- Cas test ---------- */
+function chargerCasTest(){
+ const set=(id,v)=>{const e=$(id);if(!e)return;if(e.type==='checkbox')e.checked=!!v;else e.value=v};
+ Object.entries({hdispo:1,gj:1.85,hba1c:8.8,sym:0,jeune:1,sexe:'H',age:54,poids:90,taille:175,tour_taille:102,
+  age_diag:54,mode:'insidieux',ab:'neg',cetose:'absence',fam_dt2:1,pas:138,pad:86,tg:2.1,hdl:.38,
+  cr:11.5,ucr:'mgL',alb:85,cu:1.0,kal:4.6,ct:2.25,ldl:1.45,tabac:'actif',mono:2,
+  hbact:8.8}).forEach(([k,v])=>set(k,v));
+ refresh();naviguerVers(1);toast('Cas test chargé : cliquez sur OK à chaque étape pour suivre le guide.')}
+build();document.addEventListener('input',refresh);document.addEventListener('change',refresh);refresh();
+
+</script>
+<script>
+function ouvrirModule(m,a){
+ document.querySelectorAll('.module').forEach(e=>e.classList.toggle('active',e.id==='mod-'+m));
+ document.querySelectorAll('.mtab').forEach(e=>e.classList.toggle('active',e.dataset.mod===m));
+ document.getElementById('btnTest').style.display=m==='assistant'?'':'none';
+ if(m==='urgences'){const p=document.getElementById('poids'),u=document.getElementById('u_p');if(p&&u&&p.value&&!u.value){u.value=p.value;calcUrg()}}
+ if(m==='chroniques')renderChSynth();
+ if(a){const t=document.getElementById(a);if(t)setTimeout(()=>t.scrollIntoView({behavior:'smooth'}),30);else scrollTo({top:0})}else scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+<script>
+(function(){
+const $=id=>document.getElementById(id),f=(x,d=1)=>(Math.round(x*Math.pow(10,d))/Math.pow(10,d)).toString().replace('.',',');
+function calc(){
+ const P=+$('u_p').value,G=+$('u_g').value,Na=+$('u_na').value,df=+$('u_df').value,fx=+$('u_fx').value,o=[];
+ const L=(c,t)=>o.push(`<div class="rounded p-2.5 ${c} text-slate-800">${t}</div>`);
+ if(P>0){
+  const u=P*.1,mlh=u*10;
+  L('bg-white',`<b>Insuline phase 1 (0,1 UI/kg/h)</b> : ${f(u)} UI/h. Perfusion à 0,1 UI/mL : <b>${f(mlh,0)} mL/h</b> = <b>${f(mlh*df/60,0)} gouttes/min</b>. Bolus horaire IV : <b>${f(Math.round(u*2)/2)} UI/h</b>.`);
+  L('bg-white',`<b>Insuline phase 2 (glycémie &lt; 2,5 g/L, 0,05 UI/kg/h)</b> : ${f(u/2)} UI/h (${f(mlh/2,0)} mL/h, ${f(mlh/2*df/60,0)} gouttes/min).`);
+  if(fx>0){const r=fx/P;L(r>.15||r<.09?'bg-amber-100':'bg-emerald-100',`<b>Bolus fixe de ${f(fx,0)} UI/h</b> = ${f(r,2)} UI/kg/h pour ${f(P,0)} kg : ${r>.15?'au-dessus de 0,14 UI/kg/h, risque d’hypoglycémie et d’hypokaliémie, réduire.':r<.09?'en dessous de 0,1 UI/kg/h, risque de sous-traitement.':'dans la fourchette 0,1 à 0,14 UI/kg/h.'}`)}
+  L('bg-white',`<b>Remplissage</b> : 1ère heure ${f(P*15,0)} à ${f(P*20,0)} mL de NaCl 0,9 % ; déficit total estimé ≈ ${f(P*100,0)} mL.`);
+ }
+ if(G>0){L(G<2?'bg-amber-100':'bg-white',`<b>Glycémie ${f(G,2)} g/L</b> : ${G>=6?'seuil SHH atteint (≥ 6 g/L).':G>=2.5?'phase 1 : insuline pleine dose, baisse visée 0,5 à 0,75 g/L/h.':G>=2?'phase 2 : G5 % + NaCl + KCl, insuline réduite de moitié, objectif 1,5 à 2,0 g/L.':'< 2,00 g/L : si cétose, évoquer l’ACD euglycémique ; glucose avec insuline.'}`)}
+ if(G>0&&Na>0){const osm=2*Na+G*5.55,n1=Na+1.6*(G-1),n2=Na+2.4*(G-1);
+  L(osm>300?'bg-purple-100':'bg-white',`<b>Osmolalité efficace = ${f(osm,0)} mOsm/kg</b> ${osm>300?'(> 300 : hyperosmolarité, rechercher un SHH ou une forme mixte)':'(≤ 300)'}.`);
+  L('bg-white',`<b>Natrémie corrigée</b> ≈ ${f(n1,0)} à ${f(n2,0)} mmol/L (1,6 à 2,4 mmol/L par g/L au-dessus de 1).`)}
+ $('u_out').innerHTML=o.join('')||'<div class="text-slate-300">Saisissez le poids, la glycémie et la natrémie.</div>';
+}
+window.calcUrg=calc;calc();
+})();
+</script>
+<script>
+(function(){
+const FR=['annuel','tous les 6 à 12 mois','tous les 3 à 6 mois','tous les 1 à 3 mois'],T={ok:'text-emerald-700',warn:'text-amber-700',bad:'text-red-700',na:'text-slate-500'};
+window.renderChSynth=function(){
+ const el=document.getElementById('ch-synth');
+ if(typeof S==='undefined'||!S.bil){el.innerHTML='<p class="text-slate-600">Aucune donnée patient. Validez l’étape 3 de l’assistant (bilan cardio-rénal) : les atteintes retrouvées et le calendrier de suivi s’afficheront ici.</p>';return}
+ const b=S.bil,mo=g('mono'),rows=[];
+ const add=(o,s,tone,fu)=>rows.push('<tr class="align-top border-t"><td class="py-1.5 pr-3 font-semibold">'+o+'</td><td class="py-1.5 pr-3 font-semibold '+T[tone]+'">'+s+'</td><td class="py-1.5">'+fu+'</td></tr>');
+ if(b.dfg==null&&b.rac==null)add('Rein','non évalué','na','DFGe + RAC à réaliser.');
+ else add('Rein',b.mrc?'MRC (DFGe '+(b.dfg!=null?Math.round(b.dfg):'?')+', RAC '+(b.rac!=null?Math.round(b.rac):'?')+')':'pas de MRC',b.mrc?'warn':'ok',b.mrc?'DFGe + RAC '+(((b.dfg!=null&&b.dfg<30)||b.rac>300)?'3 à 4 fois par an':(b.dfg!=null&&b.dfg<60)?'2 fois par an':'1 à 2 fois par an')+' ; IEC/ARA2, iSGLT2 ; avis néphrologique si DFGe &lt; 30 ou RAC &gt; 300.':'DFGe + RAC une fois par an.');
+ const rr=b.rr,rn=rr==null||rr==='';
+ add('Rétine',rn?'non évaluée':rr==='0'?'absente':rr==='1'?'non proliférante':'proliférante ou maculopathie',rn?'na':rr==='0'?'ok':rr==='1'?'warn':'bad',rn?'Fond d’œil à programmer.':rr==='0'?'Fond d’œil tous les 1 à 2 ans.':rr==='1'?'Fond d’œil au moins annuel, ophtalmologue.':'Avis ophtalmologique urgent (laser, anti-VEGF).');
+ add('Nerfs',mo==null?'non évalués':b.neuro?'perte de sensibilité ('+mo+' point(s) non perçu(s))':'sensibilité conservée',mo==null?'na':b.neuro?'warn':'ok',b.neuro?'Éducation, examen des pieds selon la catégorie ; traitement de la douleur si besoin ; chercher les causes associées.':'Monofilament + 2e test une fois par an.');
+ const ev=mo!=null||b.aomi||g('def')||g('ulc');
+ add('Pieds',ev?'catégorie IWGDF '+b.pg:'non évalués',ev?(b.pg>=3?'bad':b.pg>=2?'warn':'ok'):'na',ev?'Examen '+FR[b.pg]+'.':'Examen annuel à programmer.');
+ add('Artères et cœur',(b.aomi||b.mcva||b.ic)?[b.mcva&&'maladie athéromateuse',b.aomi&&'AOMI',b.ic&&'insuffisance cardiaque'].filter(Boolean).join(', '):'aucune retrouvée',(b.aomi||b.mcva||b.ic)?'bad':'ok',(b.aomi||b.mcva||b.ic)?'Statine haute intensité, antiagrégant en prévention secondaire, iSGLT2 ou aGLP-1 ; bilan vasculaire.':'PA à chaque consultation, lipides annuels.');
+ if(b.fib!=null)add('Foie','FIB-4 '+f2(b.fib),b.fib>2.67?'bad':b.fib>=1.3?'warn':'ok',b.fib>2.67?'Hépatologie.':b.fib>=1.3?'Élastographie.':'FIB-4 annuel.');
+ el.innerHTML='<table class="w-full text-left"><thead><tr class="font-bold text-slate-800"><th class="pb-1 pr-3">Atteinte</th><th class="pb-1 pr-3">Statut</th><th class="pb-1">Suivi</th></tr></thead><tbody>'+rows.join('')+'</tbody></table>';
+};
+})();
+</script>
+<script>
+(function(){
+const F=[
+{n:"Biguanide",m:"Metformine",h:"aucun",c:["Glucophage","Metformine Biogaran","Metformin-Denk","Diaformine","Metformin Vir"],d:"500 mg/j au repas, +500 mg par semaine ; 1 500 à 3 000 mg/j en 2 à 3 prises.",p:"Pas d’hypoglycémie ni de prise de poids. Arrêt en cas d’insuffisance rénale aiguë, déshydratation, sepsis, produit de contraste iodé (si DFGe &lt; 30 ou IRA), insuffisance hépatique, alcoolisme. Troubles digestifs ; carence en B12 au long cours."},
+{n:"Sulfamides hypoglycémiants",m:"Gliclazide, glimépiride, glibenclamide",h:"élevé",c:["Gliclazide LP : Glide, Sergliron","Glimépiride : Irys, Glimiwel, Glimépiride-Denk, †Amarel","Glibenclamide : Daonil"],d:"Gliclazide LP 30 à 120 mg/j le matin ; glimépiride 1 à 6 mg/j en 1 prise ; glibenclamide 2,5 à 15 mg/j.",p:"Hypoglycémies et prise de poids. Préférer gliclazide ou glimépiride ; éviter le glibenclamide chez le sujet âgé et l’insuffisant rénal (hypoglycémies prolongées). Contre-indiqués : DT1, grossesse, insuffisance rénale ou hépatique sévère. Éducation à l’hypoglycémie."},
+{n:"Associations fixes avec la metformine",m:"Metformine + vildagliptine, glibenclamide ou glimépiride",h:"selon l’association",c:["Vildagliptine/metformine : Galvus Met 50/500, 50/850, 50/1000","Glibenclamide/metformine : Glucovance 2,5/500, 5/500, 5/1000","Glimépiride/metformine : Glimeryl-M, Metride-2 (2 mg/500 mg)","†Janumet (sitagliptine), †Xigduo (dapagliflozine), †Synjardy (empagliflozine), †Jentadueto (linagliptine)"],d:"Galvus Met : 1 comprimé matin et soir ; les autres : 1 à 2 prises par jour aux repas, selon les composants.",p:"Cumulent les précautions de chaque composant, surtout la dose de metformine selon le DFGe. Peu souples pour la titration : préférer les molécules séparées au début."},
+{n:"Glinides",m:"Répaglinide",h:"modéré",c:["†Novonorm"],d:"0,5 à 4 mg avant chaque repas (max 16 mg/j) ; sauter la prise si repas sauté.",p:"Utile si repas irréguliers. Ne pas associer à un sulfamide ni au gemfibrozil."},
+{n:"Inhibiteurs de la DPP-4 (gliptines)",m:"Vildagliptine, sitagliptine, linagliptine, saxagliptine",h:"très faible",c:["Vildagliptine : Galvus, Vilda-Denk","Sitagliptine : Gvia, †Januvia","†Linagliptine : Trajenta","†Saxagliptine : Onglyza"],d:"Vildagliptine 50 mg × 2/j (50 mg × 1 si DFGe &lt; 50 ou associée à un sulfamide) ; sitagliptine 100 mg/j (50 mg si DFGe 30–44 ; 25 mg si &lt; 30) ; linagliptine 5 mg/j sans adaptation.",p:"Neutres sur le poids. Ne jamais associer à un aGLP-1. Arrêt si douleur abdominale persistante (pancréatite). Vildagliptine : surveiller les ALAT. Saxagliptine : prudence en cas d’insuffisance cardiaque."},
+{n:"Inhibiteurs du SGLT2 (gliflozines)",m:"Dapagliflozine, empagliflozine",h:"très faible",c:["†Forxiga (dapagliflozine)","†Jardiance (empagliflozine)","†Invokana (canagliflozine)"],d:"Dapagliflozine 10 mg/j ; empagliflozine 10 mg/j (25 mg possible). Initiation possible jusqu’à DFGe 20.",p:"Bénéfice cardiaque et rénal même si l’effet glycémique baisse avec le DFGe. Mycoses génitales, déshydratation, acidocétose euglycémique : arrêt 3 jours avant chirurgie et en maladie aiguë. Prudence avec un pied à risque (AOMI, ulcère). Non indiqués en DT1."},
+{n:"Agonistes du récepteur du GLP-1",m:"Sémaglutide, liraglutide, dulaglutide, tirzépatide",h:"très faible",c:["†Ozempic (sémaglutide, hebdomadaire)","†Rybelsus (sémaglutide oral)","†Victoza (liraglutide, quotidien)","†Trulicity (dulaglutide, hebdomadaire)","†Mounjaro (tirzépatide, hebdomadaire)"],d:"Sémaglutide 0,25 mg/sem 4 semaines, puis 0,5 puis 1 mg ; liraglutide 0,6 mg/j 1 semaine, puis 1,2 puis 1,8 mg ; dulaglutide 0,75 puis 1,5 mg/sem ; tirzépatide 2,5 mg/sem 4 semaines puis 5 mg, paliers de 2,5 mg toutes les 4 semaines.",p:"Perte de poids ; bénéfice cardiovasculaire (sémaglutide, liraglutide, dulaglutide) et rénal (sémaglutide). Nausées, lithiase biliaire. Contre-indiqués : antécédent de cancer médullaire de la thyroïde, NEM2, pancréatite. Prudence en cas de rétinopathie évoluée. Coût et conservation au froid."},
+{n:"Inhibiteur des alpha-glucosidases",m:"Acarbose",h:"aucun",c:["†Glucor"],d:"50 mg au début de chaque repas, jusqu’à 100 mg × 3.",p:"Flatulences, diarrhée. En cas d’hypoglycémie associée, resucrer avec du glucose (pas du saccharose)."},
+{n:"Glitazone",m:"Pioglitazone",h:"très faible",c:["†Actos"],d:"15 à 30 mg/j (max 45 mg).",p:"Peu coûteuse. Contre-indiquée en cas d’insuffisance cardiaque, d’œdèmes importants, de fractures, d’antécédent de cancer de la vessie."},
+{n:"Insulines lentes (basales)",m:"NPH et analogues lents",h:"modéré",c:["NPH : Insulatard (flacon 10 mL), †Humodar B","Glargine : †Lantus, †Toujeo, †Basaglar","†Levemir (détémir)","†Tresiba (dégludec)"],d:"DT2 : 10 U/j ou 0,1–0,2 U/kg/j le soir ; +2 U tous les 3 jours jusqu’à une glycémie à jeun de 0,8–1,3 g/L ; −10 à 20 % si hypoglycémie. NPH : au coucher, à agiter avant injection.",p:"Hypoglycémies nocturnes (NPH surtout), prise de poids. Réduire ou arrêter le sulfamide à l’introduction. Rotation des sites."},
+{n:"Insulines rapides",m:"Insuline humaine régulière et analogues rapides",h:"élevé",c:["Humaine : Actrapid, Humodar R (IV possible en urgence)","†NovoRapid (asparte)","†Humalog (lispro)","†Apidra (glulisine)"],d:"Humaine : 30 minutes avant le repas ; analogues : 0 à 15 minutes avant. Dose adaptée aux glucides et à la glycémie.",p:"Seules Actrapid et Humodar R s’utilisent en perfusion IV (voir module Urgences). Risque d’hypoglycémie post-prandiale tardive avec l’insuline humaine."},
+{n:"Insulines prémélangées",m:"Insuline humaine ou analogue biphasique",h:"élevé",c:["Mixtard 30 (30 % rapide / 70 % NPH)","Humodar C25 (25 / 75)","†NovoMix 30","†Humalog Mix 25"],d:"2 injections par jour, avant le petit-déjeuner et le dîner ; répartition habituelle 2/3 le matin, 1/3 le soir.",p:"Peu souples : repas réguliers indispensables. Hypoglycémies, prise de poids. Utiles quand le schéma basal-bolus est impossible."}
+];
+const hb={aucun:"bg-emerald-100 text-emerald-800","très faible":"bg-emerald-100 text-emerald-800",modéré:"bg-amber-100 text-amber-800",élevé:"bg-red-100 text-red-800","selon l’association":"bg-slate-100 text-slate-700"};
+function strip(s){return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")}
+window.renderMed=function(){
+ const q=strip(document.getElementById("med_q").value.trim());
+ const L=F.filter(f=>!q||strip([f.n,f.m,f.c.join(" ")].join(" ")).includes(q));
+ document.getElementById("med_list").innerHTML=L.length?L.map(f=>'<section class="bg-white rounded-xl shadow-sm p-4"><div class="flex flex-wrap justify-between gap-2 items-start"><div><h3 class="font-bold text-base text-slate-800">'+f.n+'</h3><p class="text-xs text-slate-500">'+f.m+'</p></div><span class="text-[11px] font-semibold px-2 py-0.5 rounded-full '+(hb[f.h]||hb.aucun)+'">Risque d’hypoglycémie : '+f.h+'</span></div><ul class="mt-2 text-xs text-slate-700 space-y-1"><li><b>Spécialités :</b> '+f.c.join(" · ")+'</li><li><b>Posologie usuelle :</b> '+f.d+'</li><li><b>Points d’attention :</b> '+f.p+'</li></ul></section>').join(""):'<p class="text-xs text-slate-500 p-3">Aucun résultat.</p>';
+};
+document.getElementById("med_q").addEventListener("input",renderMed);renderMed();
+})();
+</script>
+<script>if("serviceWorker"in navigator&&location.protocol.startsWith("http"))addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));</script>
+</body>
+</html>
