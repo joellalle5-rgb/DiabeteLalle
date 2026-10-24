@@ -1,25 +1,27 @@
+
 {
- "name": "DiabeTrack Pro",
- "short_name": "DiabeTrack",
- "description": "Assistant clinique du diabète : diagnostic, traitement, urgences, complications chroniques",
- "start_url": "./index.html",
- "scope": "./",
- "display": "standalone",
- "background_color": "#f1f5f9",
- "theme_color": "#075985",
- "lang": "fr",
- "icons": [
-  {
-   "src": "icons/icon-192.png",
-   "sizes": "192x192",
-   "type": "image/png",
-   "purpose": "any maskable"
-  },
-  {
-   "src": "icons/icon-512.png",
-   "sizes": "512x512",
-   "type": "image/png",
-   "purpose": "any maskable"
-  }
- ]
+  "name": "DiabeTrack Pro",
+  "short_name": "DiabeTrack",
+  "description": "Assistant clinique du diabète : diagnostic, traitement, urgences, complications chroniques",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#075985",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
 }
+
